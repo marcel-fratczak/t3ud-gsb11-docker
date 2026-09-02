@@ -231,7 +231,7 @@ Build.
 
 ### Stand der Prüfung
 
-Geprüft am **15.08.2026** mit Trivy (`--ignore-unfixed`, Schweregrade
+Geprüft am **02.09.2026** mit Trivy (`--ignore-unfixed`, Schweregrade
 MEDIUM/HIGH/CRITICAL):
 
 | Ziel | Ergebnis |
@@ -252,7 +252,7 @@ Upstream-Image und lassen sich hier nicht beheben:
   `gosu` liest `/etc/passwd`, ruft `setuid` und `exec` – keiner dieser
   Codepfade wird erreicht. Im Entrypoint kommt es genau einmal vor.
 - Ein Wechsel auf `mariadb:11.4` hilft nicht: dort stecken dieselben
-  systemd-CVEs und derselbe `gosu`-Build (geprüft am 15.08.2026).
+  systemd-CVEs und derselbe `gosu`-Build (geprüft am 02.09.2026).
 
 Deshalb ist das Gate für das DB-Image bewusst weich – ein roter Build würde
 hier nur unbeteiligte Änderungen blockieren, ohne dass sich etwas beheben ließe.

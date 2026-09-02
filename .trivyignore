@@ -7,7 +7,7 @@
 #
 # Beide Images nutzen Master-/Worker-Trennung: Der Master startet als root,
 # die Prozesse, die Requests verarbeiten, laufen unprivilegiert. Nachgemessen
-# am 2026-08-15:
+# am 2026-09-02:
 #
 #   nginx   : Master als root, alle Worker als 'nginx'
 #   php-fpm : Master als root, Pool 'www' als 'www-data' (user/group in www.conf)
@@ -21,7 +21,7 @@
 # Ressourcenlimits aus compose.yaml.
 #
 # Both images rely on master/worker privilege separation – the processes that
-# handle requests already run unprivileged (verified 2026-08-15). Adding USER
+# handle requests already run unprivileged (verified 2026-09-02). Adding USER
 # would break nginx's port 80 bind, FPM's setuid of its workers, and the root
 # access setup.sh needs inside the php container.
 DS-0002

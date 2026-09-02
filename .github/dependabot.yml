@@ -1,0 +1,36 @@
+version: 2
+
+# Dependabot hält die Versionen aktuell, die Trivy selbst nicht aktualisiert:
+# GitHub-Actions und die Container-Base-Images. Ergänzt damit den
+# Trivy-CVE-Scan (Erkennung) um aktive Update-PRs (Remediation).
+# Dependabot keeps the versions current that Trivy does not update itself:
+# GitHub Actions and the container base images. Complements the Trivy CVE scan
+# (detection) with proactive update PRs (remediation).
+
+updates:
+  # GitHub Actions in .github/workflows/
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+    commit-message:
+      prefix: ci
+    labels:
+      - dependencies
+      - github-actions
+
+  # Container-Base-Images (Dockerfiles + compose.yaml)
+  - package-ecosystem: docker
+    directories:
+      - /docker/php
+      - /docker/nginx
+      - /
+    schedule:
+      interval: weekly
+      day: monday
+    commit-message:
+      prefix: docker
+    labels:
+      - dependencies
+      - docker

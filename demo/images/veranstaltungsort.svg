@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 640" width="1536" height="640" role="img" aria-label="Stilisierte Fachwerkhäuser über einem Fluss im Abendlicht">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b4d59"/>
+      <stop offset="55%" stop-color="#007a89"/>
+      <stop offset="100%" stop-color="#80cdec"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00525c"/>
+      <stop offset="100%" stop-color="#0b4d59"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#66ddec" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#66ddec" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1536" height="640" fill="url(#sky)"/>
+  <circle cx="1180" cy="150" r="58" fill="#f3f7fb" opacity=".85"/>
+  <circle cx="1180" cy="150" r="120" fill="url(#glow)"/>
+
+  <!-- Wasser / water -->
+  <rect y="560" width="1536" height="80" fill="url(#water)"/>
+
+  <!-- Brückenkörper mit Bogenöffnungen. Die Öffnungen sind Kreise in der
+       Wasserfarbe: ihre obere Hälfte durchstößt den Brückenkörper, die untere
+       geht nahtlos in die Wasserfläche über.
+       Bridge body with arch openings. The openings are circles in the water
+       colour: their upper half punches through the bridge body, the lower half
+       blends into the water surface. -->
+  <rect x="50" y="430" width="1436" height="130" fill="#1c2226"/>
+  <g fill="url(#water)">
+    <circle cx="170" cy="560" r="70"/>
+    <circle cx="409" cy="560" r="70"/>
+    <circle cx="648" cy="560" r="70"/>
+    <circle cx="887" cy="560" r="70"/>
+    <circle cx="1126" cy="560" r="70"/>
+    <circle cx="1365" cy="560" r="70"/>
+  </g>
+
+  <!-- Fachwerk-Häuserzeile auf der Brücke / row of houses on the bridge -->
+  <g fill="#1c2226">
+    <path d="M120 430V250l70-58 70 58v180z"/>
+    <path d="M270 430V284l64-52 64 52v146z"/>
+    <path d="M408 430V232l78-64 78 64v198z"/>
+    <path d="M574 430V296l58-48 58 48v134z"/>
+    <path d="M700 430V244l74-60 74 60v186z"/>
+    <path d="M858 430V300l62-50 62 50v130z"/>
+    <path d="M992 430V262l72-58 72 58v168z"/>
+    <path d="M1146 430V292l60-50 60 50v138z"/>
+    <path d="M1276 430V256l68-56 68 56v174z"/>
+  </g>
+
+  <!-- Fensterlichter / lit windows -->
+  <g fill="#f7bb3d">
+    <rect x="150" y="300" width="22" height="30" rx="3"/>
+    <rect x="196" y="300" width="22" height="30" rx="3"/>
+    <rect x="150" y="356" width="22" height="30" rx="3"/>
+    <rect x="308" y="330" width="20" height="28" rx="3"/>
+    <rect x="344" y="330" width="20" height="28" rx="3"/>
+    <rect x="446" y="286" width="24" height="32" rx="3"/>
+    <rect x="500" y="286" width="24" height="32" rx="3" opacity=".55"/>
+    <rect x="446" y="346" width="24" height="32" rx="3" opacity=".7"/>
+    <rect x="608" y="336" width="20" height="28" rx="3"/>
+    <rect x="742" y="292" width="24" height="32" rx="3" opacity=".8"/>
+    <rect x="792" y="292" width="24" height="32" rx="3"/>
+    <rect x="742" y="352" width="24" height="32" rx="3" opacity=".5"/>
+    <rect x="896" y="340" width="20" height="28" rx="3"/>
+    <rect x="1030" y="306" width="22" height="30" rx="3"/>
+    <rect x="1076" y="306" width="22" height="30" rx="3" opacity=".6"/>
+    <rect x="1184" y="336" width="20" height="28" rx="3" opacity=".8"/>
+    <rect x="1312" y="300" width="22" height="30" rx="3"/>
+    <rect x="1358" y="300" width="22" height="30" rx="3" opacity=".7"/>
+  </g>
+
+  <!-- Spiegelung auf dem Wasser / reflection on the water -->
+  <g fill="#f7bb3d" opacity=".28">
+    <rect x="156" y="566" width="14" height="66" rx="7"/>
+    <rect x="452" y="566" width="14" height="52" rx="7"/>
+    <rect x="748" y="566" width="14" height="72" rx="7"/>
+    <rect x="1036" y="566" width="14" height="46" rx="7"/>
+    <rect x="1318" y="566" width="14" height="60" rx="7"/>
+  </g>
+  <g stroke="#80cdec" stroke-width="3" stroke-linecap="round" opacity=".3" fill="none">
+    <path d="M60 588h210M320 612h280M660 576h240M980 604h300M1180 630h280"/>
+  </g>
+</svg>

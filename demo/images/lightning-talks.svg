@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" width="1024" height="768" role="img" aria-label="Stilisierte Vortragssilhouette vor einer großen Projektionsfläche mit Blitzsymbol">
+  <defs>
+    <linearGradient id="hall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c2226"/>
+      <stop offset="100%" stop-color="#00525c"/>
+    </linearGradient>
+    <radialGradient id="flash" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#66ddec" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#66ddec" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="proj" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#007a89"/>
+      <stop offset="100%" stop-color="#0b4d59"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1024" height="768" fill="url(#hall)"/>
+  <rect width="1024" height="768" fill="url(#flash)"/>
+
+  <!-- Projektionsfläche / projection surface -->
+  <rect x="128" y="88" width="768" height="432" rx="12" fill="url(#proj)"/>
+  <rect x="128" y="88" width="768" height="432" rx="12" fill="none" stroke="#66ddec" stroke-width="3" opacity=".5"/>
+
+  <!-- Blitz / lightning bolt -->
+  <path d="M556 148l-166 216h118l-52 172 176-224H506z" fill="#66ddec"/>
+
+  <!-- Countdown-Balken / countdown bar -->
+  <rect x="330" y="454" width="364" height="16" rx="8" fill="#1c2226" opacity=".45"/>
+  <rect x="330" y="454" width="140" height="16" rx="8" fill="#f7bb3d"/>
+
+  <!-- Bühne / stage -->
+  <rect y="520" width="1024" height="14" fill="#0b4d59"/>
+
+  <!-- Vortragende Silhouette / speaker silhouette -->
+  <g fill="#1c2226">
+    <circle cx="782" cy="452" r="34"/>
+    <path d="M726 626V510a56 56 0 0 1 112 0v116z"/>
+    <path d="M838 520l64 44-12 20-66-40z"/>
+  </g>
+
+  <!-- Publikum im Vordergrund / foreground audience -->
+  <g fill="#1c2226">
+    <circle cx="98" cy="660" r="52"/><path d="M18 768a80 80 0 0 1 160 0z"/>
+    <circle cx="300" cy="690" r="46"/><path d="M230 768a70 70 0 0 1 140 0z"/>
+    <circle cx="510" cy="664" r="52"/><path d="M430 768a80 80 0 0 1 160 0z"/>
+    <circle cx="724" cy="694" r="46"/><path d="M654 768a70 70 0 0 1 140 0z"/>
+    <circle cx="930" cy="662" r="52"/><path d="M850 768a80 80 0 0 1 160 0z"/>
+  </g>
+</svg>

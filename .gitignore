@@ -1,0 +1,13 @@
+# GSB11 wird per scripts/setup.sh nach ./app installiert (nicht versioniert)
+# GSB11 is installed into ./app by scripts/setup.sh (not versioned)
+/app/
+
+# Lokale Konfiguration mit Passwörtern / local configuration containing secrets
+.env
+
+# Werkzeug-Konfiguration des Entwicklungsrechners
+# Local tooling configuration
+/.claude/
+
+# macOS
+.DS_Store

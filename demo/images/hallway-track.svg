@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" width="1024" height="768" role="img" aria-label="Stilisierte Silhouetten von Menschen in einem hellen Konferenzfoyer">
+  <defs>
+    <linearGradient id="foyer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#80cdec"/>
+      <stop offset="55%" stop-color="#007a89"/>
+      <stop offset="100%" stop-color="#0b4d59"/>
+    </linearGradient>
+    <linearGradient id="win" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f3f7fb" stop-opacity=".85"/>
+      <stop offset="100%" stop-color="#f3f7fb" stop-opacity=".15"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1024" height="768" fill="url(#foyer)"/>
+
+  <!-- Fensterfront / window front -->
+  <g fill="url(#win)">
+    <rect x="40" y="60" width="130" height="440" rx="8"/>
+    <rect x="196" y="60" width="130" height="440" rx="8"/>
+    <rect x="352" y="60" width="130" height="440" rx="8"/>
+    <rect x="508" y="60" width="130" height="440" rx="8"/>
+    <rect x="664" y="60" width="130" height="440" rx="8"/>
+    <rect x="820" y="60" width="130" height="440" rx="8"/>
+  </g>
+
+  <!-- Bodenreflexion / floor reflection -->
+  <rect y="500" width="1024" height="268" fill="#00525c"/>
+  <g fill="#f3f7fb" opacity=".12">
+    <rect x="60" y="500" width="90" height="268"/>
+    <rect x="372" y="500" width="90" height="268"/>
+    <rect x="684" y="500" width="90" height="268"/>
+  </g>
+
+  <!-- Gruppe links / group left -->
+  <g fill="#1c2226">
+    <circle cx="176" cy="360" r="40"/><path d="M112 620V468a64 64 0 0 1 128 0v152z"/>
+    <circle cx="272" cy="386" r="34"/><path d="M218 620V488a54 54 0 0 1 108 0v132z"/>
+  </g>
+
+  <!-- Gruppe mitte / group centre -->
+  <g fill="#1c2226" opacity=".92">
+    <circle cx="510" cy="344" r="44"/><path d="M440 640V462a70 70 0 0 1 140 0v178z"/>
+    <circle cx="620" cy="372" r="36"/><path d="M562 640V494a58 58 0 0 1 116 0v146z"/>
+  </g>
+
+  <!-- Einzelne Person rechts / single person right -->
+  <g fill="#1c2226" opacity=".85">
+    <circle cx="856" cy="368" r="38"/><path d="M796 656V486a60 60 0 0 1 120 0v170z"/>
+  </g>
+
+  <!-- Stehtisch / standing table -->
+  <g fill="#1c2226" opacity=".8">
+    <rect x="330" y="556" width="120" height="12" rx="6"/>
+    <rect x="384" y="562" width="12" height="90"/>
+    <rect x="348" y="644" width="84" height="10" rx="5"/>
+  </g>
+
+  <!-- Lichtstreifen / light streaks -->
+  <g fill="#66ddec" opacity=".28">
+    <rect x="0" y="212" width="1024" height="6" rx="3"/>
+    <rect x="0" y="252" width="1024" height="3" rx="2"/>
+  </g>
+</svg>

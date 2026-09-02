@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" width="1024" height="768" role="img" aria-label="Stilisierte Konferenzbühne mit Leinwand und Publikum">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c2226"/>
+      <stop offset="100%" stop-color="#0b4d59"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#66ddec"/>
+      <stop offset="100%" stop-color="#007a89"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#66ddec" stop-opacity=".38"/>
+      <stop offset="100%" stop-color="#66ddec" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1024" height="768" fill="url(#bg)"/>
+
+  <!-- Scheinwerferkegel / spotlight cones -->
+  <path d="M300 0l-190 470h300L340 0z" fill="url(#beam)"/>
+  <path d="M724 0l190 470H614L684 0z" fill="url(#beam)"/>
+
+  <!-- Leinwand / projection screen -->
+  <rect x="212" y="112" width="600" height="330" rx="10" fill="url(#screen)" opacity=".92"/>
+  <g fill="#0b4d59" opacity=".55">
+    <rect x="256" y="164" width="330" height="26" rx="13"/>
+    <rect x="256" y="212" width="220" height="26" rx="13"/>
+    <rect x="256" y="286" width="150" height="14" rx="7"/>
+    <rect x="256" y="316" width="260" height="14" rx="7"/>
+    <rect x="256" y="346" width="200" height="14" rx="7"/>
+  </g>
+  <rect x="620" y="286" width="150" height="100" rx="8" fill="#1c2226" opacity=".45"/>
+
+  <!-- Bühnenkante / stage edge -->
+  <rect y="452" width="1024" height="16" fill="#00525c"/>
+
+  <!-- Rednerpult und Silhouette / lectern and speaker silhouette -->
+  <rect x="470" y="380" width="84" height="72" rx="6" fill="#1c2226"/>
+  <circle cx="512" cy="344" r="26" fill="#1c2226"/>
+  <path d="M470 384a42 42 0 0 1 84 0z" fill="#1c2226"/>
+
+  <!-- Publikum / audience -->
+  <g fill="#1c2226">
+    <circle cx="90" cy="612" r="46"/><path d="M20 768a70 70 0 0 1 140 0z"/>
+    <circle cx="252" cy="646" r="42"/><path d="M188 768a64 64 0 0 1 128 0z"/>
+    <circle cx="410" cy="606" r="46"/><path d="M340 768a70 70 0 0 1 140 0z"/>
+    <circle cx="568" cy="650" r="42"/><path d="M504 768a64 64 0 0 1 128 0z"/>
+    <circle cx="726" cy="608" r="46"/><path d="M656 768a70 70 0 0 1 140 0z"/>
+    <circle cx="900" cy="644" r="42"/><path d="M836 768a64 64 0 0 1 128 0z"/>
+  </g>
+
+  <!-- Displaylichter im Publikum / screen glow in the audience -->
+  <g fill="#66ddec" opacity=".5">
+    <rect x="168" y="672" width="46" height="30" rx="4"/>
+    <rect x="638" y="676" width="46" height="30" rx="4"/>
+  </g>
+</svg>

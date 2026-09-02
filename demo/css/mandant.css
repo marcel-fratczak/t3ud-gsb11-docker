@@ -1,0 +1,578 @@
+/*
+ * SPDX-FileCopyrightText: 2026 T3UD-GSB11-Democontent
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+/*
+ * Mandanten-Design nach offizieller GSB11-Farbpalette.
+ * Tenant design based on the official GSB11 colour palette.
+ *
+ * Primär / primary:     Petrol    #007A89  rgb(0, 122, 137)
+ * Sekundär / secondary: Achat     #0B4D59  rgb(11, 77, 89)
+ * Text:                 Anthrazit #333333  rgb(51, 51, 51)
+ * Akzente:              Fluorit   #66DDEC  ·  Hellblau #80CDEC  ·  Jade #F3F7FB
+ *
+ * Hinweis: --bs-primary und --bs-secondary werden von EXT:gsb_core als
+ * Inline-Style aus den Site-Settings gesetzt (config/sites/gsb/settings.yaml)
+ * und dürfen hier nicht gepflegt werden. Hier stehen nur die abgeleiteten
+ * Variablen und die fest einkompilierten Komponentenfarben.
+ * Note: --bs-primary and --bs-secondary are emitted by EXT:gsb_core as an
+ * inline style from the site settings (config/sites/gsb/settings.yaml) and
+ * must not be maintained here. This file only covers the derived variables
+ * and the component colours Bootstrap bakes in at compile time.
+ */
+
+/* ---------- Abgeleitete Farbvariablen / derived colour variables ---------- */
+
+:root,
+[data-bs-theme=light] {
+    --bs-primary-rgb: 0, 122, 137;
+    --bs-primary-text-emphasis: #00525c;
+    --bs-primary-bg-subtle: #e0f2f4;
+    --bs-primary-border-subtle: #b3dce1;
+    --bs-secondary-rgb: 11, 77, 89;
+    --bs-body-color: #333333;
+    --bs-body-color-rgb: 51, 51, 51;
+    --bs-link-color: #0b4d59;
+    --bs-link-color-rgb: 11, 77, 89;
+    --bs-link-hover-color: #07333b;
+    --bs-link-hover-color-rgb: 7, 51, 59;
+}
+
+/* Überschriften / headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+/* Akzentlinie unter der Hauptüberschrift / accent bar below the main heading */
+h1::after {
+    background-color: var(--bs-primary);
+    content: "";
+    display: block;
+    height: 0.25rem;
+    margin-top: 0.5rem;
+    width: 3.5rem;
+}
+
+/* ---------- Kopfbereich / header ---------- */
+
+.header-wrapper-bg {
+    border-bottom: 0.25rem solid var(--bs-primary);
+}
+
+/* ---------- Buttons ---------- */
+/*
+ * Bootstrap kompiliert Komponentenfarben fest ein – daher müssen die
+ * Button-Variablen hier zusätzlich überschrieben werden.
+ * Bootstrap bakes component colours in at compile time – the button
+ * variables therefore have to be overridden here as well.
+ */
+
+.btn-primary {
+    --bs-btn-bg: #007a89;
+    --bs-btn-border-color: #007a89;
+    --bs-btn-hover-bg: #00626e;
+    --bs-btn-hover-border-color: #005c67;
+    --bs-btn-active-bg: #005c67;
+    --bs-btn-active-border-color: #00525c;
+    --bs-btn-focus-shadow-rgb: 38, 142, 155;
+    --bs-btn-disabled-bg: #007a89;
+    --bs-btn-disabled-border-color: #007a89;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #007a89;
+    --bs-btn-border-color: #007a89;
+    --bs-btn-hover-bg: #007a89;
+    --bs-btn-hover-border-color: #007a89;
+    --bs-btn-active-bg: #007a89;
+    --bs-btn-active-border-color: #007a89;
+    --bs-btn-focus-shadow-rgb: 0, 122, 137;
+}
+
+.btn-secondary {
+    --bs-btn-bg: #0b4d59;
+    --bs-btn-border-color: #0b4d59;
+    --bs-btn-hover-bg: #093e48;
+    --bs-btn-hover-border-color: #083a43;
+    --bs-btn-active-bg: #083a43;
+    --bs-btn-active-border-color: #07333b;
+    --bs-btn-focus-shadow-rgb: 48, 103, 114;
+    --bs-btn-disabled-bg: #0b4d59;
+    --bs-btn-disabled-border-color: #0b4d59;
+}
+
+.btn-outline-secondary {
+    --bs-btn-color: #0b4d59;
+    --bs-btn-border-color: #0b4d59;
+    --bs-btn-hover-bg: #0b4d59;
+    --bs-btn-hover-border-color: #0b4d59;
+    --bs-btn-active-bg: #0b4d59;
+    --bs-btn-active-border-color: #0b4d59;
+    --bs-btn-focus-shadow-rgb: 11, 77, 89;
+}
+
+/* ==========================================================================
+   T3UD-2026-Landingpage / T3UD 2026 landing page
+   ========================================================================== */
+
+/* Sektionen zentrieren und vom Viewport-Rand lösen
+   Centre the sections and keep them off the viewport edge */
+.t3ud-hero,
+.t3ud-cards,
+.t3ud-stats,
+.t3ud-cta,
+.t3ud-wrap {
+    margin-inline: auto;
+    width: min(100% - 2rem, 80rem);
+}
+
+/* ---------- Hero ---------- */
+
+.t3ud-hero {
+    background: linear-gradient(135deg, #333333 0%, #0b4d59 55%, #007a89 100%);
+    border-radius: 1.5rem;
+    color: #ffffff;
+    margin: 2rem auto 3rem;
+    padding: clamp(2rem, 5vw, 4.5rem);
+}
+
+.t3ud-eyebrow {
+    color: #66ddec;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.t3ud-hero h1 {
+    color: #ffffff;
+    font-size: clamp(2.25rem, 5.5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+}
+
+.t3ud-hero h1::after {
+    display: none;
+}
+
+.t3ud-gradient {
+    background: linear-gradient(90deg, #66ddec, #80cdec);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.t3ud-sub {
+    color: #f3f7fb;
+    font-size: 1.125rem;
+    max-width: 42rem;
+}
+
+.t3ud-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    margin: 1.5rem 0 2rem;
+}
+
+.t3ud-badge {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.375rem 0.875rem;
+}
+
+/* Terminal-Fenster / terminal window */
+.t3ud-terminal {
+    background: #1c2226;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0.75rem;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.35);
+    max-width: 36rem;
+    overflow: hidden;
+}
+
+.t3ud-terminal-bar {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    color: #bec5c9;
+    display: flex;
+    font-size: 0.75rem;
+    gap: 0.4rem;
+    padding: 0.5rem 0.875rem;
+}
+
+.t3ud-terminal-bar em {
+    font-style: normal;
+    margin-left: 0.5rem;
+}
+
+.t3ud-terminal-bar span {
+    background: #bec5c9;
+    border-radius: 50%;
+    display: inline-block;
+    height: 0.75rem;
+    width: 0.75rem;
+}
+
+.t3ud-terminal-bar span:nth-child(1) { background: #780f2d; }
+.t3ud-terminal-bar span:nth-child(2) { background: #f7bb3d; }
+.t3ud-terminal-bar span:nth-child(3) { background: #00854a; }
+
+.t3ud-terminal pre {
+    color: #f3f7fb;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    margin: 0;
+    overflow-x: auto;
+    padding: 1.25rem;
+}
+
+.t3ud-ok {
+    color: #66ddec;
+    font-weight: 700;
+}
+
+.t3ud-cursor {
+    animation: t3ud-blink 1.1s steps(1) infinite;
+    color: #66ddec;
+}
+
+@keyframes t3ud-blink {
+    50% { opacity: 0; }
+}
+
+/* ---------- Karten / cards ---------- */
+
+.t3ud-cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    margin-bottom: 3rem;
+}
+
+.t3ud-card {
+    background: #f3f7fb;
+    border: 1px solid #d8e4ea;
+    border-radius: 1rem;
+    padding: 2rem 1.75rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.t3ud-card:hover {
+    border-color: #007a89;
+    box-shadow: 0 1rem 2rem rgba(11, 77, 89, 0.15);
+    transform: translateY(-0.25rem);
+}
+
+.t3ud-card-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.t3ud-card h2 {
+    color: #00525c;
+    font-size: 1.375rem;
+    margin-bottom: 0.75rem;
+}
+
+.t3ud-card h2::after {
+    display: none;
+}
+
+.t3ud-card-tag {
+    color: #007a89;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin: 1rem 0 0;
+    text-transform: uppercase;
+}
+
+/* ---------- Zahlen-Band / stats band ---------- */
+
+.t3ud-stats {
+    background: linear-gradient(120deg, #007a89, #0b4d59);
+    border-radius: 1rem;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+.t3ud-stat strong {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.t3ud-stat span {
+    display: block;
+    font-size: 0.9375rem;
+    margin-top: 0.5rem;
+    opacity: 0.9;
+}
+
+/* ---------- Abschluss-CTA / closing CTA ---------- */
+
+.t3ud-cta {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.t3ud-cta h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.t3ud-cta code {
+    background: #f3f7fb;
+    border-radius: 0.25rem;
+    color: #00525c;
+    padding: 0.125rem 0.375rem;
+}
+
+.t3ud-cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+/* ==========================================================================
+   T3UD-2026-Unterseiten / T3UD 2026 subpages (Programm, Impressionen)
+   ========================================================================== */
+
+/* ---------- Sub-Hero (kompakter als der Startseiten-Hero) ---------- */
+
+.t3ud-subhero {
+    background: linear-gradient(135deg, #333333 0%, #0b4d59 55%, #007a89 100%);
+    border-radius: 1.5rem;
+    color: #ffffff;
+    margin: 2rem auto 2.5rem;
+    padding: clamp(1.75rem, 4vw, 3rem) clamp(1.75rem, 4vw, 3.5rem);
+    width: min(100% - 2rem, 80rem);
+}
+
+.t3ud-subhero .t3ud-eyebrow { margin-bottom: 0.75rem; }
+
+.t3ud-subhero h1 {
+    color: #ffffff;
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    line-height: 1.1;
+    margin: 0 0 0.75rem;
+}
+
+.t3ud-subhero h1::after { display: none; }
+
+.t3ud-subhero p {
+    color: #f3f7fb;
+    font-size: 1.1rem;
+    margin: 0;
+    max-width: 44rem;
+}
+
+/* ---------- Hinweisbox / disclaimer note ---------- */
+/*
+ * Kennzeichnet Inhalte, die frei erfunden sind. Bewusst kräftig genug, um
+ * nicht überlesen zu werden, aber ohne Alarmfarbe – es ist ein Hinweis,
+ * keine Fehlermeldung.
+ * Marks content that is fictional. Deliberately prominent enough not to be
+ * missed, but not an alert colour – it is a note, not an error.
+ */
+.t3ud-note {
+    background: #f3f7fb;
+    border: 1px solid #b3dce1;
+    border-left: 0.375rem solid #007a89;
+    border-radius: 0.75rem;
+    color: #333333;
+    margin: 0 auto 2.5rem;
+    padding: 1.1rem 1.4rem;
+    width: min(100% - 2rem, 60rem);
+}
+
+.t3ud-note p { margin: 0; }
+.t3ud-note p + p { margin-top: 0.5rem; }
+.t3ud-note strong { color: #00525c; }
+
+/* ---------- Programm: Timeline ---------- */
+
+.t3ud-timeline {
+    border-left: 3px solid #cfe3e8;
+    margin: 0 auto 3rem;
+    padding-left: 1.75rem;
+    width: min(100% - 2rem, 60rem);
+}
+
+.t3ud-slot {
+    padding-bottom: 1.75rem;
+    position: relative;
+}
+
+.t3ud-slot:last-child { padding-bottom: 0; }
+
+.t3ud-slot::before {
+    background: #007a89;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #cfe3e8;
+    content: "";
+    height: 1rem;
+    left: calc(-1.75rem - 0.5rem - 1.5px);
+    position: absolute;
+    top: 0.3rem;
+    width: 1rem;
+}
+
+.t3ud-slot-card {
+    background: #ffffff;
+    border: 1px solid #d8e4ea;
+    border-radius: 0.9rem;
+    padding: 1.1rem 1.4rem;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.t3ud-slot-card:hover {
+    box-shadow: 0 0.75rem 1.75rem rgba(11, 77, 89, 0.13);
+    transform: translateX(0.2rem);
+}
+
+.t3ud-time {
+    color: #007a89;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.t3ud-slot-card h3 {
+    color: #00525c;
+    font-size: 1.25rem;
+    margin: 0.2rem 0 0.4rem;
+}
+
+.t3ud-slot-card p {
+    color: #4f5b5f;
+    font-size: 0.98rem;
+    margin: 0;
+}
+
+.t3ud-tags { margin-top: 0.7rem; }
+
+.t3ud-tag-pill {
+    background: #e0f2f4;
+    border-radius: 50rem;
+    color: #00525c;
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin: 0 0.4rem 0.3rem 0;
+    padding: 0.2rem 0.7rem;
+    text-transform: uppercase;
+}
+
+/* Hervorgehobener Slot / highlighted slot */
+.t3ud-slot.is-featured .t3ud-slot-card {
+    background: linear-gradient(120deg, #007a89, #0b4d59);
+    border: none;
+    color: #ffffff;
+}
+
+.t3ud-slot.is-featured .t3ud-slot-card h3,
+.t3ud-slot.is-featured .t3ud-time { color: #ffffff; }
+.t3ud-slot.is-featured .t3ud-slot-card p { color: #e0f2f4; }
+.t3ud-slot.is-featured::before { background: #66ddec; box-shadow: 0 0 0 2px #66ddec; }
+.t3ud-slot.is-featured .t3ud-tag-pill { background: rgba(255, 255, 255, 0.2); color: #ffffff; }
+
+/* ---------- Impressionen: Feature-Banner ---------- */
+
+.t3ud-feature {
+    border-radius: 1.25rem;
+    margin: 0 auto 2.5rem;
+    overflow: hidden;
+    position: relative;
+    width: min(100% - 2rem, 80rem);
+}
+
+.t3ud-feature img {
+    display: block;
+    height: clamp(14rem, 34vw, 24rem);
+    object-fit: cover;
+    width: 100%;
+}
+
+.t3ud-feature figcaption {
+    background: linear-gradient(to top, rgba(11, 77, 89, 0.85), rgba(11, 77, 89, 0));
+    bottom: 0;
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    left: 0;
+    padding: 2.5rem 1.5rem 1.25rem;
+    position: absolute;
+    right: 0;
+}
+
+/* ---------- Impressionen: Galerie-Grid ---------- */
+
+.t3ud-gallery {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    margin: 0 auto 3rem;
+    width: min(100% - 2rem, 80rem);
+}
+
+.t3ud-gallery figure {
+    border-radius: 1rem;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.t3ud-gallery img {
+    aspect-ratio: 4 / 3;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    width: 100%;
+}
+
+.t3ud-gallery figure:hover img { transform: scale(1.07); }
+
+.t3ud-gallery figcaption {
+    background: linear-gradient(to top, rgba(28, 34, 38, 0.82), rgba(28, 34, 38, 0));
+    bottom: 0;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    left: 0;
+    padding: 1.75rem 1rem 0.9rem;
+    position: absolute;
+    right: 0;
+}
+
+/* Reduzierte Bewegung respektieren / respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .t3ud-cursor { animation: none; }
+
+    .t3ud-card,
+    .t3ud-card:hover,
+    .t3ud-slot-card,
+    .t3ud-gallery img { transition: none; }
+
+    .t3ud-card:hover,
+    .t3ud-slot-card:hover,
+    .t3ud-gallery figure:hover img { transform: none; }
+}

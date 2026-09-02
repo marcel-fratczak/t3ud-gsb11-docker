@@ -1,0 +1,45 @@
+# Bewusst akzeptierte Trivy-Funde. Jeder Eintrag mit Begründung und Prüfdatum.
+# Deliberately accepted Trivy findings, each with rationale and review date.
+
+# DS-0002 – "Specify at least 1 USER command in Dockerfile"
+#
+# Betrifft docker/nginx/Dockerfile und docker/php/Dockerfile.
+#
+# Beide Images nutzen Master-/Worker-Trennung: Der Master startet als root,
+# die Prozesse, die Requests verarbeiten, laufen unprivilegiert. Nachgemessen
+# am 2026-08-15:
+#
+#   nginx   : Master als root, alle Worker als 'nginx'
+#   php-fpm : Master als root, Pool 'www' als 'www-data' (user/group in www.conf)
+#
+# Ein USER-Statement würde beides brechen: nginx könnte Port 80 nicht mehr
+# binden, und der FPM-Master könnte die Worker nicht mehr auf www-data
+# absenken. Zusätzlich braucht scripts/setup.sh root im php-Container für
+# 'composer create-project' und das abschließende chown auf www-data.
+#
+# Kompensierend greifen no-new-privileges, read_only (web) und die
+# Ressourcenlimits aus compose.yaml.
+#
+# Both images rely on master/worker privilege separation – the processes that
+# handle requests already run unprivileged (verified 2026-08-15). Adding USER
+# would break nginx's port 80 bind, FPM's setuid of its workers, and the root
+# access setup.sh needs inside the php container.
+DS-0002
+
+# DS-0026 – "Add HEALTHCHECK instruction in your Dockerfile"
+#
+# Betrifft docker/nginx/Dockerfile und docker/php/Dockerfile.
+#
+# Healthchecks gibt es für alle drei Container – sie stehen in compose.yaml
+# statt in den Dockerfiles. Das ist bewusst so: Der db-Container nutzt das
+# unveränderte Upstream-Image mariadb, dessen Healthcheck sich nur dort
+# definieren lässt. Alle drei an derselben Stelle zu halten ist wartbarer als
+# zwei im Image und einer in der Orchestrierung. Zudem hängt
+# 'depends_on: condition: service_healthy' ohnehin an compose.
+#
+# Health checks exist for all three containers – they live in compose.yaml
+# rather than in the Dockerfiles. Deliberate: the db container uses the
+# unmodified upstream mariadb image, whose health check can only be declared
+# there. Keeping all three in one place beats splitting them between image and
+# orchestration.
+DS-0026

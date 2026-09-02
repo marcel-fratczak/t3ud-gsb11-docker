@@ -1,0 +1,82 @@
+name: Smoke test
+
+# End-to-End-Test: installiert den kompletten GSB11-Stack inklusive Democontent
+# über scripts/setup.sh und prüft, dass Frontend, Backend und die Demoseiten
+# erreichbar sind. Fängt Brüche durch neue Sitepackage- oder Base-Image-
+# Versionen ab – und genau das ist die Absicherung für die Live-Demo.
+#
+# Der Lauf nutzt den nicht-interaktiven Pfad des Skripts (alle drei Werte per
+# Option), also exakt den Weg, den auch die Generalprobe geht.
+#
+# End-to-end test: installs the full GSB11 stack including demo content via
+# scripts/setup.sh and verifies that frontend, backend and the demo pages are
+# reachable. Catches breakage from new sitepackage or base image versions.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "30 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    name: Install & verify stack
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install GSB11 stack with demo content
+        run: ./scripts/setup.sh --demo --port 8080 --admin-password 'Ci-Smoke-2026.'
+
+      - name: Verify frontend, backend and demo pages
+        run: |
+          set -e
+          check() {
+            code=$(curl -s -L -o /dev/null -w '%{http_code}' "$1")
+            echo "$1 -> HTTP $code"
+            test "$code" = "200"
+          }
+          check http://localhost:8080/
+          check http://localhost:8080/typo3
+          check http://localhost:8080/programm
+          check http://localhost:8080/impressionen
+          check http://localhost:8080/fileadmin/user_upload/t3ud/veranstaltungsort.svg
+
+      - name: Verify demo content is actually rendered
+        run: |
+          set -e
+          # Nicht nur HTTP 200: die Sektionen müssen im Markup ankommen,
+          # sonst wäre ein leerer Seitenrumpf schon „grün".
+          # Not just HTTP 200 – the sections have to show up in the markup,
+          # otherwise an empty page body would already count as green.
+          curl -s http://localhost:8080/           | grep -q 't3ud-hero'
+          curl -s http://localhost:8080/programm   | grep -q 't3ud-timeline'
+          curl -s http://localhost:8080/impressionen | grep -q 't3ud-gallery'
+          # Markenfarbe aus den Site-Einstellungen / brand colour from site settings
+          curl -s http://localhost:8080/ | grep -q '#007A89'
+
+      - name: Verify repeated demo import stays idempotent
+        run: |
+          set -e
+          ./scripts/demo-content.sh
+          # Weiterhin genau 6 Democontent-Elemente, keine Dubletten.
+          # Still exactly 6 demo elements, no duplicates.
+          count=$(docker compose exec -T -e MYSQL_PWD="$(grep '^DB_PASSWORD=' .env | cut -d"'" -f2)" php \
+            mysql -N -B -h db -u gsb11 gsb11 \
+            -e "SELECT COUNT(*) FROM tt_content WHERE rowDescription='T3UD-Democontent' AND deleted=0;")
+          echo "Democontent-Elemente: $count"
+          test "$count" = "6"
+
+      - name: Dump container logs on failure
+        if: failure()
+        run: docker compose logs --tail=200
+
+      - name: Tear down
+        if: always()
+        run: docker compose down -v

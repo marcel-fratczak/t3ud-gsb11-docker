@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" width="1024" height="768" role="img" aria-label="Stilisierte Lichterketten über einer abendlichen Terrasse mit Stehtischen">
+  <defs>
+    <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2226"/>
+      <stop offset="45%" stop-color="#0b4d59"/>
+      <stop offset="100%" stop-color="#007a89"/>
+    </linearGradient>
+    <radialGradient id="bulb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f7bb3d" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#f7bb3d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1024" height="768" fill="url(#dusk)"/>
+
+  <!-- Sterne / stars -->
+  <g fill="#f3f7fb" opacity=".55">
+    <circle cx="120" cy="70" r="2.5"/><circle cx="284" cy="44" r="2"/>
+    <circle cx="430" cy="86" r="2.5"/><circle cx="612" cy="52" r="2"/>
+    <circle cx="788" cy="92" r="2.5"/><circle cx="930" cy="58" r="2"/>
+    <circle cx="196" cy="130" r="2"/><circle cx="708" cy="140" r="2"/>
+  </g>
+
+  <!-- Lichterketten / string lights -->
+  <g fill="none" stroke="#4f5b5f" stroke-width="3">
+    <path d="M0 120q256 130 512 40t512 20"/>
+    <path d="M0 230q256 140 512 50t512 30"/>
+  </g>
+  <g>
+    <circle cx="128" cy="184" r="26" fill="url(#bulb)"/><circle cx="128" cy="184" r="8" fill="#f7bb3d"/>
+    <circle cx="256" cy="212" r="26" fill="url(#bulb)"/><circle cx="256" cy="212" r="8" fill="#f7bb3d"/>
+    <circle cx="384" cy="222" r="26" fill="url(#bulb)"/><circle cx="384" cy="222" r="8" fill="#f7bb3d"/>
+    <circle cx="512" cy="212" r="26" fill="url(#bulb)"/><circle cx="512" cy="212" r="8" fill="#f7bb3d"/>
+    <circle cx="640" cy="192" r="26" fill="url(#bulb)"/><circle cx="640" cy="192" r="8" fill="#f7bb3d"/>
+    <circle cx="768" cy="182" r="26" fill="url(#bulb)"/><circle cx="768" cy="182" r="8" fill="#f7bb3d"/>
+    <circle cx="896" cy="184" r="26" fill="url(#bulb)"/><circle cx="896" cy="184" r="8" fill="#f7bb3d"/>
+
+    <circle cx="192" cy="298" r="24" fill="url(#bulb)"/><circle cx="192" cy="298" r="7" fill="#f7bb3d"/>
+    <circle cx="352" cy="330" r="24" fill="url(#bulb)"/><circle cx="352" cy="330" r="7" fill="#f7bb3d"/>
+    <circle cx="512" cy="324" r="24" fill="url(#bulb)"/><circle cx="512" cy="324" r="7" fill="#f7bb3d"/>
+    <circle cx="672" cy="300" r="24" fill="url(#bulb)"/><circle cx="672" cy="300" r="7" fill="#f7bb3d"/>
+    <circle cx="832" cy="290" r="24" fill="url(#bulb)"/><circle cx="832" cy="290" r="7" fill="#f7bb3d"/>
+  </g>
+
+  <!-- Terrassenboden / terrace floor -->
+  <rect y="580" width="1024" height="188" fill="#00525c"/>
+  <g stroke="#0b4d59" stroke-width="3">
+    <path d="M0 620h1024M0 668h1024M0 716h1024"/>
+  </g>
+
+  <!-- Stehtische / standing tables -->
+  <g fill="#1c2226">
+    <ellipse cx="200" cy="512" rx="86" ry="18"/><rect x="192" y="512" width="16" height="110"/><ellipse cx="200" cy="626" rx="52" ry="12"/>
+    <ellipse cx="530" cy="540" rx="94" ry="20"/><rect x="521" y="540" width="18" height="120"/><ellipse cx="530" cy="664" rx="58" ry="13"/>
+    <ellipse cx="850" cy="506" rx="80" ry="17"/><rect x="843" y="506" width="15" height="104"/><ellipse cx="850" cy="614" rx="48" ry="11"/>
+  </g>
+
+  <!-- Gläser auf den Tischen / glasses on the tables -->
+  <g fill="#66ddec" opacity=".8">
+    <rect x="164" y="474" width="20" height="34" rx="4"/>
+    <rect x="214" y="470" width="20" height="38" rx="4"/>
+    <rect x="498" y="500" width="22" height="38" rx="4"/>
+    <rect x="548" y="504" width="22" height="34" rx="4"/>
+    <rect x="822" y="470" width="20" height="34" rx="4"/>
+  </g>
+
+  <!-- Silhouetten / silhouettes -->
+  <!-- Kopf knapp über der Schulterlinie ansetzen, sonst verschmelzen beide
+       Formen zu einem Block.
+       Place the head just above the shoulder line, otherwise both shapes
+       merge into a single block. -->
+  <g fill="#1c2226" opacity=".95">
+    <circle cx="330" cy="408" r="32"/><path d="M276 620V500a54 54 0 0 1 108 0v120z"/>
+    <circle cx="668" cy="430" r="28"/><path d="M620 640V512a48 48 0 0 1 96 0v128z"/>
+  </g>
+</svg>

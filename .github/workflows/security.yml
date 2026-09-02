@@ -1,0 +1,289 @@
+name: Security scan
+
+# Automatisierte CVE-/Sicherheitsprüfung der Container-Images und der
+# Build-/Compose-Konfiguration mit Trivy, plus wöchentlich aktualisierte SBOM.
+# Automated CVE/security scanning of the container images and the build/compose
+# configuration using Trivy, plus a weekly refreshed SBOM.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Wöchentlich montags 06:00 UTC – fängt neu veröffentlichte CVEs ein.
+    # Weekly on Mondays 06:00 UTC – catches newly published CVEs.
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write   # SARIF-Upload (nur öffentliche Repos / nur mit GHAS)
+
+jobs:
+  image-scan:
+    name: Image scan (${{ matrix.name }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: php
+            context: docker/php
+          - name: nginx
+            context: docker/nginx
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Build image
+        run: docker build -t t3ud-gsb11-${{ matrix.name }}:scan ${{ matrix.context }}
+
+      # 1) Lesbarer Report (alle Schweregrade) → als Artifact archiviert
+      #    Human-readable report (all severities) → archived as an artifact
+      - name: Trivy report (table)
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: t3ud-gsb11-${{ matrix.name }}:scan
+          scan-type: image
+          scanners: vuln
+          format: table
+          output: trivy-${{ matrix.name }}.txt
+        env:
+          TRIVY_SKIP_VERSION_CHECK: "true"
+
+      - name: Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: trivy-report-${{ matrix.name }}
+          path: trivy-${{ matrix.name }}.txt
+
+      # 2) SARIF → GitHub Security-Tab (nur öffentliche Repos; private brauchen GHAS)
+      #    SARIF → GitHub Security tab (public repos only; private needs GHAS)
+      - name: Trivy report (SARIF)
+        if: ${{ !github.event.repository.private }}
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: t3ud-gsb11-${{ matrix.name }}:scan
+          scan-type: image
+          scanners: vuln
+          format: sarif
+          output: trivy-${{ matrix.name }}.sarif
+          ignore-unfixed: true
+        env:
+          TRIVY_SKIP_VERSION_CHECK: "true"
+
+      - name: Upload SARIF
+        if: ${{ !github.event.repository.private }}
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: trivy-${{ matrix.name }}.sarif
+          category: trivy-${{ matrix.name }}
+
+      # 3) Gate: Build schlägt fehl bei BEHEBBAREN MEDIUM/HIGH/CRITICAL-CVEs
+      #    Gate: fail the build on FIXABLE MEDIUM/HIGH/CRITICAL CVEs
+      - name: Trivy gate (fail on fixable MEDIUM/HIGH/CRITICAL)
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: t3ud-gsb11-${{ matrix.name }}:scan
+          scan-type: image
+          scanners: vuln
+          severity: MEDIUM,HIGH,CRITICAL
+          ignore-unfixed: true
+          exit-code: "1"
+          format: table
+        env:
+          TRIVY_SKIP_VERSION_CHECK: "true"
+
+  db-image-scan:
+    name: Image scan (db)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      # Tag aus compose.yaml lesen – eine Quelle, kein Duplikat im Workflow.
+      # Read the tag from compose.yaml – single source, no duplicate here.
+      - name: Resolve db image from compose.yaml
+        id: img
+        run: |
+          ref=$(grep -Eom1 'image:[[:space:]]*mariadb:[^[:space:]]+' compose.yaml | awk '{print $2}')
+          test -n "$ref"
+          echo "ref=$ref" >> "$GITHUB_OUTPUT"
+
+      - name: Pull image
+        run: docker pull "${{ steps.img.outputs.ref }}"
+
+      - name: Trivy report (table)
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: ${{ steps.img.outputs.ref }}
+          scan-type: image
+          scanners: vuln
+          format: table
+          output: trivy-db.txt
+        env:
+          TRIVY_SKIP_VERSION_CHECK: "true"
+
+      - name: Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: trivy-report-db
+          path: trivy-db.txt
+
+      # Kein hartes Gate: Das Image kommt unverändert von upstream. Behebbare
+      # CVEs ⇒ 'docker compose pull' bzw. Dependabot-Tag-Update; ein roter Build
+      # hier würde nur unbeteiligte PRs blockieren. Stattdessen Warn-Annotation.
+      # Nur OS-Pakete: die sind per Pull/Tag-Update tatsächlich behebbar. Das
+      # eingebettete gosu-Binary (statisches Go) sammelt Go-stdlib-CVEs, die nur
+      # ein Upstream-Rebuild beheben kann – sie stehen weiter im Table-Report.
+      # No hard gate: the image is unmodified upstream. Fixable CVEs ⇒
+      # 'docker compose pull' or a Dependabot tag update; a red build here would
+      # only block unrelated PRs. Emit a warning annotation instead.
+      - name: Trivy check (fixable MEDIUM/HIGH/CRITICAL, OS packages)
+        id: dbgate
+        continue-on-error: true
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: ${{ steps.img.outputs.ref }}
+          scan-type: image
+          scanners: vuln
+          severity: MEDIUM,HIGH,CRITICAL
+          ignore-unfixed: true
+          exit-code: "1"
+          format: table
+        env:
+          TRIVY_SKIP_VERSION_CHECK: "true"
+          TRIVY_PKG_TYPES: "os"
+
+      - name: Warn about fixable CVEs
+        if: steps.dbgate.outcome == 'failure'
+        run: echo "::warning title=DB-Image::${{ steps.img.outputs.ref }} enthält behebbare CVEs – 'docker compose pull' ausführen bzw. Dependabot-Update mergen. / contains fixable CVEs – run 'docker compose pull' or merge the Dependabot update."
+
+  config-scan:
+    name: Config / Dockerfile scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      # Fehlkonfigurationen in Dockerfiles/compose aufspüren (nur Reporting)
+      # Detect misconfigurations in Dockerfiles/compose (reporting only)
+      - name: Trivy config scan
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          scan-type: config
+          scan-ref: .
+          format: table
+          output: trivy-config.txt
+        env:
+          TRIVY_SKIP_VERSION_CHECK: "true"
+
+      - name: Upload config report artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: trivy-report-config
+          path: trivy-config.txt
+
+  secret-scan:
+    name: Secret scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      # Versehentlich eingecheckte Zugangsdaten aufspüren. Das Repo enthält nur
+      # .env.example mit Platzhaltern – ein Fund hier ist immer ein echter.
+      # Detect accidentally committed credentials. The repo only ships
+      # .env.example with placeholders, so any finding here is a real one.
+      - name: Trivy secret scan
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          scan-type: fs
+          scan-ref: .
+          scanners: secret
+          exit-code: "1"
+          format: table
+        env:
+          TRIVY_SKIP_VERSION_CHECK: "true"
+
+  sbom:
+    name: SBOM
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # zum Zurückcommitten der aktualisierten SBOM / to commit the updated SBOM
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Build images
+        run: |
+          docker build -t t3ud-gsb11-php:sbom docker/php
+          docker build -t t3ud-gsb11-nginx:sbom docker/nginx
+
+      - name: Generate SBOM (php)
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: t3ud-gsb11-php:sbom
+          scan-type: image
+          format: cyclonedx
+          output: sbom/php.cdx.json
+        env:
+          TRIVY_SKIP_VERSION_CHECK: "true"
+
+      - name: Generate SBOM (nginx)
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: t3ud-gsb11-nginx:sbom
+          scan-type: image
+          format: cyclonedx
+          output: sbom/nginx.cdx.json
+        env:
+          TRIVY_SKIP_VERSION_CHECK: "true"
+
+      - name: Pull db image
+        run: |
+          ref=$(grep -Eom1 'image:[[:space:]]*mariadb:[^[:space:]]+' compose.yaml | awk '{print $2}')
+          test -n "$ref"
+          docker pull "$ref"
+          echo "ref=$ref" >> "$GITHUB_ENV"
+
+      - name: Generate SBOM (db)
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: ${{ env.ref }}
+          scan-type: image
+          format: cyclonedx
+          output: sbom/db.cdx.json
+        env:
+          TRIVY_SKIP_VERSION_CHECK: "true"
+
+      # Stabil & arch-agnostisch normalisieren / normalise to a stable, arch-agnostic SBOM
+      - name: Normalize SBOMs
+        run: |
+          python3 scripts/normalize-sbom.py sbom/php.cdx.json   t3ud-gsb11-php
+          python3 scripts/normalize-sbom.py sbom/nginx.cdx.json t3ud-gsb11-nginx
+          python3 scripts/normalize-sbom.py sbom/db.cdx.json    t3ud-gsb11-db
+
+      - name: Upload SBOM artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: sbom
+          path: sbom/*.cdx.json
+
+      # Aktualisierte SBOM nur auf main und nur bei echter Änderung zurückcommitten
+      # Commit the updated SBOM back only on main and only if it actually changed
+      - name: Commit updated SBOM
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          if git diff --quiet -- sbom; then
+            echo "SBOM unverändert / unchanged"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add sbom
+            git commit -m "chore(sbom): update container SBOMs"
+            # Push kann durch Branch-Schutz blockiert sein. Dann nicht hart
+            # fehlschlagen – die SBOM liegt zusätzlich als Artifact vor.
+            # The push may be blocked by branch protection. Don't fail hard –
+            # the SBOM is also available as an artifact.
+            git push || echo "::warning::SBOM-Push blockiert (Branch-Schutz: GitHub Actions als Bypass eintragen). SBOM siehe Artifact."
+          fi

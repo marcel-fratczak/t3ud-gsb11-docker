@@ -274,12 +274,18 @@ jobs:
       - name: Commit updated SBOM
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
-          if git diff --quiet -- sbom; then
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Erst stagen, dann den Index vergleichen. 'git diff' allein sieht
+          # neue, noch unversionierte Dateien nicht – beim allerersten Lauf
+          # wäre die SBOM damit stillschweigend nie committet worden.
+          # Stage first, then compare the index: plain 'git diff' does not see
+          # new untracked files, so on the very first run the SBOM would have
+          # been silently dropped.
+          git add sbom
+          if git diff --cached --quiet -- sbom; then
             echo "SBOM unverändert / unchanged"
           else
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add sbom
             git commit -m "chore(sbom): update container SBOMs"
             # Push kann durch Branch-Schutz blockiert sein. Dann nicht hart
             # fehlschlagen – die SBOM liegt zusätzlich als Artifact vor.

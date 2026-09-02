@@ -341,8 +341,16 @@ set -a; . ./.env; set +a
 # ===========================================================================
 C="docker compose"
 in_php() { $C exec -T php "$@"; }
+
+# --default-character-set=utf8mb4: Der mysql-Client im Image verbindet sich
+# sonst als latin1 und kodiert UTF-8-Inhalte doppelt. Der Grundinhalts-Dump
+# der Distribution bringt zwar sein eigenes 'SET NAMES utf8mb4' mit, aber
+# darauf sollte sich nicht verlassen, wer hier später eine Anweisung ergänzt.
+# The mysql client in the image otherwise connects as latin1 and double-encodes
+# UTF-8 content. The distribution's dump carries its own 'SET NAMES utf8mb4',
+# but nobody adding a statement here later should have to rely on that.
 db_sql() { $C exec -T -e MYSQL_PWD="$DB_PASSWORD" php \
-    sh -c "mysql -h db -u'$DB_USER' '$DB_NAME' $*"; }
+    sh -c "mysql --default-character-set=utf8mb4 -h db -u'$DB_USER' '$DB_NAME' $*"; }
 
 section "Installation"
 

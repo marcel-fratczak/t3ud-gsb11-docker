@@ -76,6 +76,16 @@ Das Repository ist öffentlich und bezieht sich auf eine reale Veranstaltung:
 
 ## Stolpersteine, die schon Zeit gekostet haben
 
+- **Der `mysql`-Client im php-Image verbindet sich als `latin1`.** Jeder Aufruf
+  braucht `--default-character-set=utf8mb4`, sonst nimmt der Server UTF-8-Inhalte
+  als latin1 entgegen und kodiert sie doppelt: aus `ö` (`C3 B6`) wird `Ã¶`
+  (`C3 83 C2 B6`). Der Grundinhalts-Dump der Distribution fällt nicht darauf
+  herein, weil er sein eigenes `SET NAMES utf8mb4` mitbringt – wer eine eigene
+  Anweisung ergänzt, schon. `smoke.yml` prüft das Frontend deshalb auf `Ã`.
+- **Dateien nach `app/` immer durch den Container schreiben**, nie vom Host.
+  `setup.sh` chownt `app/` zum Schluss auf `www-data`; ein Host-Schreibzugriff
+  scheitert danach unter Linux mit `Permission denied`. Auf macOS fällt das
+  nicht auf, weil Docker Desktop die Eigentümer bei Bind-Mounts umschreibt.
 - `pecl install` im PHP-Build bricht bei wackliger Leitung ab. Der Fehler sieht
   nach einem Konfigurationsproblem aus, ist aber transient – einfach erneut
   bauen, gecachte Layer bleiben erhalten.

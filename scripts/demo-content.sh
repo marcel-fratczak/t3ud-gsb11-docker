@@ -38,10 +38,23 @@ set -a; . ./.env; set +a
 
 C="docker compose"
 in_php()  { $C exec -T php "$@"; }
+
+# --default-character-set=utf8mb4 ist Pflicht, nicht Kosmetik: Der mysql-Client
+# im Image verbindet sich sonst als latin1. Die Inhalte hier sind UTF-8, der
+# Server würde sie als latin1 entgegennehmen und nach utf8mb4 umkodieren –
+# aus 'ö' (C3 B6) wird dann 'Ã¶' (C3 83 C2 B6). Der Basis-Dump der Distribution
+# entgeht dem nur, weil er selbst 'SET NAMES utf8mb4' mitbringt.
+# Mandatory, not cosmetic: the mysql client in the image otherwise connects as
+# latin1. The content here is UTF-8, so the server would take it as latin1 and
+# transcode it to utf8mb4, turning 'ö' (C3 B6) into 'Ã¶' (C3 83 C2 B6). The
+# distribution's base dump escapes this only because it carries its own
+# 'SET NAMES utf8mb4'.
+MYSQL="mysql --default-character-set=utf8mb4"
+
 db_sql()  { $C exec -T -e MYSQL_PWD="$DB_PASSWORD" php \
-    sh -c "mysql -h db -u'$DB_USER' '$DB_NAME' $*"; }
+    sh -c "$MYSQL -h db -u'$DB_USER' '$DB_NAME' $*"; }
 db_val()  { $C exec -T -e MYSQL_PWD="$DB_PASSWORD" php \
-    sh -c "mysql -N -B -h db -u'$DB_USER' '$DB_NAME' -e \"$1\"" | tr -d '\r'; }
+    sh -c "$MYSQL -N -B -h db -u'$DB_USER' '$DB_NAME' -e \"$1\"" | tr -d '\r'; }
 
 $C ps --status running --services 2>/dev/null | grep -qx php \
     || die "Der php-Container läuft nicht. Zuerst 'docker compose up -d' bzw. scripts/setup.sh ausführen."
@@ -137,8 +150,8 @@ add_element "$ROOT_UID"          512 demo/content/home-4-cta.html
 add_element "$PAGE_PROGRAMM"     128 demo/content/programm.html
 add_element "$PAGE_IMPRESSIONEN" 128 demo/content/impressionen.html
 
-$C exec -T -e MYSQL_PWD="$DB_PASSWORD" -T php \
-    sh -c "mysql -h db -u'$DB_USER' '$DB_NAME'" < "$SQL_FILE"
+$C exec -T -e MYSQL_PWD="$DB_PASSWORD" php \
+    sh -c "$MYSQL -h db -u'$DB_USER' '$DB_NAME'" < "$SQL_FILE"
 ok "6 Inhaltselemente eingefügt"
 
 # ---------------------------------------------------------------------------

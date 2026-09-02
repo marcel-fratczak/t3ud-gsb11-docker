@@ -61,6 +61,27 @@ jobs:
           # Markenfarbe aus den Site-Einstellungen / brand colour from site settings
           curl -s http://localhost:8080/ | grep -q '#007A89'
 
+      - name: Verify umlauts survive the import
+        run: |
+          set -e
+          # Doppelt kodiertes UTF-8 entsteht, sobald der mysql-Client als
+          # latin1 verbindet: aus 'ö' wird dann 'Ã¶'. Ein 'Ã' kommt in
+          # deutschem Text sonst nicht vor und ist deshalb ein sicherer Marker.
+          # Double-encoded UTF-8 appears as soon as the mysql client connects
+          # as latin1 ('ö' becomes 'Ã¶'). A 'Ã' never occurs in German text, so
+          # it is a reliable marker.
+          for p in / /programm /impressionen; do
+            if curl -s "http://localhost:8080$p" | grep -q 'Ã'; then
+              echo "::error::Doppelt kodiertes UTF-8 auf $p"
+              exit 1
+            fi
+          done
+          # Gegenprobe: die Umlaute müssen auch wirklich ankommen.
+          # Counter-check: the umlauts have to actually arrive.
+          curl -s http://localhost:8080/         | grep -q 'Behörden-CMS'
+          curl -s http://localhost:8080/programm | grep -q 'Thüringer'
+          echo "UTF-8 ok"
+
       - name: Verify repeated demo import stays idempotent
         run: |
           set -e

@@ -20,10 +20,9 @@ updates:
       - dependencies
       - github-actions
 
-  # Container-Base-Images (Dockerfiles + compose.yaml)
+  # Container-Base-Images: nginx (Dockerfile) und mariadb (compose.yaml)
   - package-ecosystem: docker
     directories:
-      - /docker/php
       - /docker/nginx
       - /
     schedule:
@@ -34,3 +33,39 @@ updates:
     labels:
       - dependencies
       - docker
+
+  # PHP-Base-Image, getrennt geführt wegen der Ignore-Regel unten.
+  # PHP base image, kept separate because of the ignore rule below.
+  - package-ecosystem: docker
+    directory: /docker/php
+    schedule:
+      interval: weekly
+      day: monday
+    commit-message:
+      prefix: docker
+    labels:
+      - dependencies
+      - docker
+    # Die PHP-Version ist keine frei aktualisierbare Abhängigkeit, sondern
+    # ergibt sich aus der unterstützten Spanne der TYPO3-LTS-Linie (13.4:
+    # PHP 8.2–8.4) und aus dem, was der GSB11-Kickstarter selbst verwendet.
+    # Ein automatischer Sprung auf eine neuere Minor-Version erzeugt einen
+    # PR, der nicht einmal baut – nachgewiesen am 2026-09-02, als Dependabot
+    # 8.3 → 8.5 vorschlug und 'docker-php-ext-install' fehlschlug.
+    # Sicherheitspatches kommen ohnehin nicht über Dependabot: Das Tag
+    # '8.3-fpm-bookworm' ist rollend, und 'pull: true' in compose.yaml zieht
+    # bei jedem Rebuild das aktuell gepatchte Image.
+    # Ein Wechsel der PHP-Version gehört bewusst gemacht – zusammen mit einem
+    # TYPO3-Upgrade und einem grünen Smoke-Test.
+    #
+    # The PHP version is not a freely updatable dependency: it follows the
+    # TYPO3 LTS support range (13.4: PHP 8.2-8.4) and what the GSB11
+    # kickstarter itself uses. An automatic minor bump produces a PR that does
+    # not even build (observed 2026-09-02, 8.3 -> 8.5). Security patches do not
+    # arrive via Dependabot anyway - the tag is a rolling one and 'pull: true'
+    # fetches the patched image on every rebuild.
+    ignore:
+      - dependency-name: php
+        update-types:
+          - version-update:semver-major
+          - version-update:semver-minor

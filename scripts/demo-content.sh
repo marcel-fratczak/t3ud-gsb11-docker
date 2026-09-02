@@ -144,20 +144,23 @@ ok "6 Inhaltselemente eingefügt"
 # ---------------------------------------------------------------------------
 # Bilder und Stylesheet / images and stylesheet
 # ---------------------------------------------------------------------------
-# ./app ist als Bind-Mount eingehängt, die Dateien werden deshalb direkt auf
-# dem Host kopiert. Die Rechte setzt der abschließende chown im Container.
-# ./app is bind-mounted, so the files are copied on the host. The closing
-# chown inside the container fixes ownership.
-IMG_TARGET="app/.build/public/fileadmin/user_upload/t3ud"
-mkdir -p "$IMG_TARGET"
-cp demo/images/* "$IMG_TARGET/"
+# Alle Schreibzugriffe laufen durch den Container, nicht über den Host.
+# Grund: setup.sh chownt ./app am Ende auf www-data. Unter Linux schlägt ein
+# Schreibzugriff des Host-Benutzers danach mit "Permission denied" fehl – auf
+# macOS fällt das nicht auf, weil Docker Desktop die Eigentümer umschreibt.
+# Every write goes through the container rather than the host: setup.sh chowns
+# ./app to www-data, after which a host-side write fails with "permission
+# denied" on Linux. macOS hides this because Docker Desktop remaps ownership.
+IMG_TARGET=".build/public/fileadmin/user_upload/t3ud"
+in_php mkdir -p "$IMG_TARGET"
+$C cp demo/images/. "php:/var/www/html/$IMG_TARGET/" >/dev/null
 ok "$(find demo/images -type f | wc -l | tr -d ' ') Bilder nach fileadmin/user_upload/t3ud/ kopiert"
 
 # mandant.css ist der vom Kickstarter vorgesehene Anpassungspunkt und hängt als
 # Symlink im Docroot (_assets/<hash>/StyleSheets/) – Überschreiben genügt.
 # mandant.css is the kickstarter's designated customisation point and is
 # symlinked into the docroot, so overwriting it is enough.
-cp demo/css/mandant.css app/Resources/Public/StyleSheets/mandant.css
+$C cp demo/css/mandant.css php:/var/www/html/Resources/Public/StyleSheets/mandant.css >/dev/null
 ok "Mandanten-Stylesheet gesetzt"
 
 # ---------------------------------------------------------------------------
@@ -167,19 +170,27 @@ ok "Mandanten-Stylesheet gesetzt"
 # Werten; sie gehören deshalb hierher und nicht ins Stylesheet.
 # EXT:gsb_core emits --bs-primary/--bs-secondary as an inline style from these
 # values, so they belong here rather than in the stylesheet.
-SETTINGS="app/config/sites/gsb/settings.yaml"
-if [ -f "$SETTINGS" ]; then
-    # Vorherige Farbzeilen entfernen, damit ein erneuter Lauf nicht anhängt
-    # Drop previous colour lines so a repeated run does not append duplicates
-    grep -v '^colors\.colorGeneral\.' "$SETTINGS" > "$SETTINGS.tmp" || true
-    cat >> "$SETTINGS.tmp" <<'YAML'
-colors.colorGeneral.gsb-color-primary: '#007A89'
-colors.colorGeneral.gsb-color-secondary: '#0B4D59'
-colors.colorGeneral.gsb-color-quaternary: '#66DDEC'
-YAML
-    mv "$SETTINGS.tmp" "$SETTINGS"
-    ok "Markenfarben gesetzt (Petrol #007A89 / Achat #0B4D59)"
-fi
+#
+# Die vorhandenen Farbzeilen werden zuerst entfernt, damit ein erneuter Lauf
+# nicht anhängt, sondern ersetzt.
+# Existing colour lines are dropped first so a repeated run replaces them
+# instead of appending.
+printf '%s\n' \
+    "colors.colorGeneral.gsb-color-primary: '#007A89'" \
+    "colors.colorGeneral.gsb-color-secondary: '#0B4D59'" \
+    "colors.colorGeneral.gsb-color-quaternary: '#66DDEC'" \
+    | in_php sh -c 'cat > /tmp/t3ud-colors.yaml'
+
+in_php sh -c '
+    set -e
+    S=config/sites/gsb/settings.yaml
+    [ -f "$S" ] || exit 0
+    grep -v "^colors\.colorGeneral\." "$S" > /tmp/t3ud-settings.yaml || true
+    cat /tmp/t3ud-colors.yaml >> /tmp/t3ud-settings.yaml
+    cat /tmp/t3ud-settings.yaml > "$S"
+    rm -f /tmp/t3ud-settings.yaml /tmp/t3ud-colors.yaml
+'
+ok "Markenfarben gesetzt (Petrol #007A89 / Achat #0B4D59)"
 
 # ---------------------------------------------------------------------------
 # Aufräumen / finalise

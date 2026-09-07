@@ -1031,11 +1031,11 @@
       "version": "1.4.2-r0"
     },
     {
-      "bom-ref": "pkg:apk/alpine/libuuid@2.42.1-r0?distro=3.24.1",
+      "bom-ref": "pkg:apk/alpine/libuuid@2.42.3-r1?distro=3.24.1",
       "hashes": [
         {
           "alg": "SHA-1",
-          "content": "6acb0e27112dfb784e6f7ccceb0e968fafa09713"
+          "content": "8f041ef637ad75f381cc0c034f2afbbb0303264e"
         }
       ],
       "licenses": [
@@ -1046,12 +1046,12 @@
         }
       ],
       "name": "libuuid",
-      "purl": "pkg:apk/alpine/libuuid@2.42.1-r0?distro=3.24.1",
+      "purl": "pkg:apk/alpine/libuuid@2.42.3-r1?distro=3.24.1",
       "supplier": {
         "name": "Natanael Copa <ncopa@alpinelinux.org>"
       },
       "type": "library",
-      "version": "2.42.1-r0"
+      "version": "2.42.3-r1"
     },
     {
       "bom-ref": "pkg:apk/alpine/libwebp@1.6.0-r0?distro=3.24.1",
@@ -1508,11 +1508,11 @@
       "version": "1.30.4-r1"
     },
     {
-      "bom-ref": "pkg:apk/alpine/nginx-module-njs@1.30.4.1.0.0-r1?distro=3.24.1",
+      "bom-ref": "pkg:apk/alpine/nginx-module-njs@1.30.4.1.0.1-r1?distro=3.24.1",
       "hashes": [
         {
           "alg": "SHA-1",
-          "content": "3ba33707b4cfd928bef69348e9ac1fc84cb0e102"
+          "content": "ddaed72d9d5afdc10896eda843369e493b28bb39"
         }
       ],
       "licenses": [
@@ -1533,12 +1533,12 @@
         }
       ],
       "name": "nginx-module-njs",
-      "purl": "pkg:apk/alpine/nginx-module-njs@1.30.4.1.0.0-r1?distro=3.24.1",
+      "purl": "pkg:apk/alpine/nginx-module-njs@1.30.4.1.0.1-r1?distro=3.24.1",
       "supplier": {
         "name": "NGINX Packaging <nginx-packaging@f5.com>"
       },
       "type": "library",
-      "version": "1.30.4.1.0.0-r1"
+      "version": "1.30.4.1.0.1-r1"
     },
     {
       "bom-ref": "pkg:apk/alpine/nginx-module-xslt@1.30.4-r1?distro=3.24.1",

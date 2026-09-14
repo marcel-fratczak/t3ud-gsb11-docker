@@ -9200,7 +9200,7 @@
       "version": "1.5.4+dfsg2-5"
     },
     {
-      "bom-ref": "pkg:deb/debian/linux-libc-dev@6.1.180-1?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/linux-libc-dev@6.1.187-1?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -9239,12 +9239,12 @@
         }
       ],
       "name": "linux-libc-dev",
-      "purl": "pkg:deb/debian/linux-libc-dev@6.1.180-1?distro=debian-12.15",
+      "purl": "pkg:deb/debian/linux-libc-dev@6.1.187-1?distro=debian-12.15",
       "supplier": {
         "name": "Debian Kernel Team <debian-kernel@lists.debian.org>"
       },
       "type": "library",
-      "version": "6.1.180-1"
+      "version": "6.1.187-1"
     },
     {
       "bom-ref": "pkg:deb/debian/login@4.13%2Bdfsg1-1%2Bdeb12u2?distro=debian-12.15&epoch=1",

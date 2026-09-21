@@ -3443,7 +3443,7 @@
       "version": "1.14.10-1~deb12u1"
     },
     {
-      "bom-ref": "pkg:deb/debian/libde265-0@1.0.11-1%2Bdeb12u2?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/libde265-0@1.0.11-1%2Bdeb12u3?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -3482,12 +3482,12 @@
         }
       ],
       "name": "libde265-0",
-      "purl": "pkg:deb/debian/libde265-0@1.0.11-1%2Bdeb12u2?distro=debian-12.15",
+      "purl": "pkg:deb/debian/libde265-0@1.0.11-1%2Bdeb12u3?distro=debian-12.15",
       "supplier": {
         "name": "Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>"
       },
       "type": "library",
-      "version": "1.0.11-1+deb12u2"
+      "version": "1.0.11-1+deb12u3"
     },
     {
       "bom-ref": "pkg:deb/debian/libdebconfclient0@0.270?distro=debian-12.15",
@@ -5407,7 +5407,7 @@
       "version": "2.1-6.1"
     },
     {
-      "bom-ref": "pkg:deb/debian/libjbig2dec0@0.19-3?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/libjbig2dec0@0.19-3%2Bdeb12u1?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -5451,12 +5451,12 @@
         }
       ],
       "name": "libjbig2dec0",
-      "purl": "pkg:deb/debian/libjbig2dec0@0.19-3?distro=debian-12.15",
+      "purl": "pkg:deb/debian/libjbig2dec0@0.19-3%2Bdeb12u1?distro=debian-12.15",
       "supplier": {
         "name": "Debian Printing Team <debian-printing@lists.debian.org>"
       },
       "type": "library",
-      "version": "0.19-3"
+      "version": "0.19-3+deb12u1"
     },
     {
       "bom-ref": "pkg:deb/debian/libjpeg62-turbo-dev@2.1.5-2?distro=debian-12.15&epoch=1",
@@ -5893,7 +5893,7 @@
       "version": "1.9.4-1"
     },
     {
-      "bom-ref": "pkg:deb/debian/liblzma5@5.4.1-1%2Bdeb12u1?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/liblzma5@5.4.1-1%2Bdeb12u2?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -5972,12 +5972,12 @@
         }
       ],
       "name": "liblzma5",
-      "purl": "pkg:deb/debian/liblzma5@5.4.1-1%2Bdeb12u1?distro=debian-12.15",
+      "purl": "pkg:deb/debian/liblzma5@5.4.1-1%2Bdeb12u2?distro=debian-12.15",
       "supplier": {
         "name": "Sebastian Andrzej Siewior <sebastian@breakpoint.cc>"
       },
       "type": "library",
-      "version": "5.4.1-1+deb12u1"
+      "version": "5.4.1-1+deb12u2"
     },
     {
       "bom-ref": "pkg:deb/debian/libmagic-mgc@5.44-3?distro=debian-12.15&epoch=1",
@@ -11089,7 +11089,7 @@
       "version": "1:7.7+6"
     },
     {
-      "bom-ref": "pkg:deb/debian/xz-utils@5.4.1-1%2Bdeb12u1?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/xz-utils@5.4.1-1%2Bdeb12u2?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -11168,12 +11168,12 @@
         }
       ],
       "name": "xz-utils",
-      "purl": "pkg:deb/debian/xz-utils@5.4.1-1%2Bdeb12u1?distro=debian-12.15",
+      "purl": "pkg:deb/debian/xz-utils@5.4.1-1%2Bdeb12u2?distro=debian-12.15",
       "supplier": {
         "name": "Sebastian Andrzej Siewior <sebastian@breakpoint.cc>"
       },
       "type": "library",
-      "version": "5.4.1-1+deb12u1"
+      "version": "5.4.1-1+deb12u2"
     },
     {
       "bom-ref": "pkg:deb/debian/zlib1g-dev@1.2.13.dfsg-1?distro=debian-12.15&epoch=1",

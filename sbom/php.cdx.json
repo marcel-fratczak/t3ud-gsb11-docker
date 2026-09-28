@@ -8348,7 +8348,7 @@
       "version": "1.10.0-3+deb12u1"
     },
     {
-      "bom-ref": "pkg:deb/debian/libssl3@3.0.20-1~deb12u2?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/libssl3@3.0.22-1~deb12u1?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -8372,12 +8372,12 @@
         }
       ],
       "name": "libssl3",
-      "purl": "pkg:deb/debian/libssl3@3.0.20-1~deb12u2?distro=debian-12.15",
+      "purl": "pkg:deb/debian/libssl3@3.0.22-1~deb12u1?distro=debian-12.15",
       "supplier": {
         "name": "Debian OpenSSL Team <pkg-openssl-devel@alioth-lists.debian.net>"
       },
       "type": "library",
-      "version": "3.0.20-1~deb12u2"
+      "version": "3.0.22-1~deb12u1"
     },
     {
       "bom-ref": "pkg:deb/debian/libstdc%2B%2B-12-dev@12.2.0-14%2Bdeb12u1?distro=debian-12.15",
@@ -9826,7 +9826,7 @@
       "version": "6.4-4"
     },
     {
-      "bom-ref": "pkg:deb/debian/openssl@3.0.20-1~deb12u2?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/openssl@3.0.22-1~deb12u1?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -9850,12 +9850,12 @@
         }
       ],
       "name": "openssl",
-      "purl": "pkg:deb/debian/openssl@3.0.20-1~deb12u2?distro=debian-12.15",
+      "purl": "pkg:deb/debian/openssl@3.0.22-1~deb12u1?distro=debian-12.15",
       "supplier": {
         "name": "Debian OpenSSL Team <pkg-openssl-devel@alioth-lists.debian.net>"
       },
       "type": "library",
-      "version": "3.0.20-1~deb12u2"
+      "version": "3.0.22-1~deb12u1"
     },
     {
       "bom-ref": "pkg:deb/debian/passwd@4.13%2Bdfsg1-1%2Bdeb12u2?distro=debian-12.15&epoch=1",
@@ -10812,7 +10812,7 @@
       "version": "1.34+dfsg-1.2+deb12u1"
     },
     {
-      "bom-ref": "pkg:deb/debian/tzdata@2026b-0%2Bdeb12u1?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/tzdata@2026c-0%2Bdeb12u1?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -10821,12 +10821,12 @@
         }
       ],
       "name": "tzdata",
-      "purl": "pkg:deb/debian/tzdata@2026b-0%2Bdeb12u1?distro=debian-12.15",
+      "purl": "pkg:deb/debian/tzdata@2026c-0%2Bdeb12u1?distro=debian-12.15",
       "supplier": {
         "name": "GNU Libc Maintainers <debian-glibc@lists.debian.org>"
       },
       "type": "library",
-      "version": "2026b-0+deb12u1"
+      "version": "2026c-0+deb12u1"
     },
     {
       "bom-ref": "pkg:deb/debian/ucf@3.0043%2Bnmu1%2Bdeb12u1?distro=debian-12.15",

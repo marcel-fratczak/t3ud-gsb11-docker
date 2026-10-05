@@ -3615,7 +3615,7 @@
       "version": "0.17029-2"
     },
     {
-      "bom-ref": "pkg:deb/debian/libexpat1@2.5.0-1%2Bdeb12u3?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/libexpat1@2.5.0-1%2Bdeb12u4?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -3624,12 +3624,12 @@
         }
       ],
       "name": "libexpat1",
-      "purl": "pkg:deb/debian/libexpat1@2.5.0-1%2Bdeb12u3?distro=debian-12.15",
+      "purl": "pkg:deb/debian/libexpat1@2.5.0-1%2Bdeb12u4?distro=debian-12.15",
       "supplier": {
         "name": "Laszlo Boszormenyi (GCS) <gcs@debian.org>"
       },
       "type": "library",
-      "version": "2.5.0-1+deb12u3"
+      "version": "2.5.0-1+deb12u4"
     },
     {
       "bom-ref": "pkg:deb/debian/libext2fs2@1.47.0-2%2Bb2?distro=debian-12.15",
@@ -7311,7 +7311,7 @@
       "version": "1.1.29"
     },
     {
-      "bom-ref": "pkg:deb/debian/libpcre2-8-0@10.42-1%2Bdeb12u1?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/libpcre2-8-0@10.42-1%2Bdeb12u2?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -7340,15 +7340,15 @@
         }
       ],
       "name": "libpcre2-8-0",
-      "purl": "pkg:deb/debian/libpcre2-8-0@10.42-1%2Bdeb12u1?distro=debian-12.15",
+      "purl": "pkg:deb/debian/libpcre2-8-0@10.42-1%2Bdeb12u2?distro=debian-12.15",
       "supplier": {
         "name": "Matthew Vernon <matthew@debian.org>"
       },
       "type": "library",
-      "version": "10.42-1+deb12u1"
+      "version": "10.42-1+deb12u2"
     },
     {
-      "bom-ref": "pkg:deb/debian/libperl5.36@5.36.0-7%2Bdeb12u3?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/libperl5.36@5.36.0-7%2Bdeb12u4?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -7477,12 +7477,12 @@
         }
       ],
       "name": "libperl5.36",
-      "purl": "pkg:deb/debian/libperl5.36@5.36.0-7%2Bdeb12u3?distro=debian-12.15",
+      "purl": "pkg:deb/debian/libperl5.36@5.36.0-7%2Bdeb12u4?distro=debian-12.15",
       "supplier": {
         "name": "Niko Tyni <ntyni@debian.org>"
       },
       "type": "library",
-      "version": "5.36.0-7+deb12u3"
+      "version": "5.36.0-7+deb12u4"
     },
     {
       "bom-ref": "pkg:deb/debian/libpkgconf3@1.8.1-1?distro=debian-12.15",
@@ -9912,7 +9912,7 @@
       "version": "2.7.6-7"
     },
     {
-      "bom-ref": "pkg:deb/debian/perl-base@5.36.0-7%2Bdeb12u3?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/perl-base@5.36.0-7%2Bdeb12u4?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -10041,15 +10041,15 @@
         }
       ],
       "name": "perl-base",
-      "purl": "pkg:deb/debian/perl-base@5.36.0-7%2Bdeb12u3?distro=debian-12.15",
+      "purl": "pkg:deb/debian/perl-base@5.36.0-7%2Bdeb12u4?distro=debian-12.15",
       "supplier": {
         "name": "Niko Tyni <ntyni@debian.org>"
       },
       "type": "library",
-      "version": "5.36.0-7+deb12u3"
+      "version": "5.36.0-7+deb12u4"
     },
     {
-      "bom-ref": "pkg:deb/debian/perl-modules-5.36@5.36.0-7%2Bdeb12u3?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/perl-modules-5.36@5.36.0-7%2Bdeb12u4?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -10178,15 +10178,15 @@
         }
       ],
       "name": "perl-modules-5.36",
-      "purl": "pkg:deb/debian/perl-modules-5.36@5.36.0-7%2Bdeb12u3?distro=debian-12.15",
+      "purl": "pkg:deb/debian/perl-modules-5.36@5.36.0-7%2Bdeb12u4?distro=debian-12.15",
       "supplier": {
         "name": "Niko Tyni <ntyni@debian.org>"
       },
       "type": "library",
-      "version": "5.36.0-7+deb12u3"
+      "version": "5.36.0-7+deb12u4"
     },
     {
-      "bom-ref": "pkg:deb/debian/perl@5.36.0-7%2Bdeb12u3?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/perl@5.36.0-7%2Bdeb12u4?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -10315,12 +10315,12 @@
         }
       ],
       "name": "perl",
-      "purl": "pkg:deb/debian/perl@5.36.0-7%2Bdeb12u3?distro=debian-12.15",
+      "purl": "pkg:deb/debian/perl@5.36.0-7%2Bdeb12u4?distro=debian-12.15",
       "supplier": {
         "name": "Niko Tyni <ntyni@debian.org>"
       },
       "type": "library",
-      "version": "5.36.0-7+deb12u3"
+      "version": "5.36.0-7+deb12u4"
     },
     {
       "bom-ref": "pkg:deb/debian/pkg-config@1.8.1-1?distro=debian-12.15",

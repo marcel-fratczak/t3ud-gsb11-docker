@@ -1025,7 +1025,7 @@
       "version": "1:2.5.1-1ubuntu0.1"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libaudit-common@3.0.7-1build1?distro=ubuntu-22.04&epoch=1",
+      "bom-ref": "pkg:deb/ubuntu/libaudit-common@3.0.7-1ubuntu0.1?distro=ubuntu-22.04&epoch=1",
       "licenses": [
         {
           "license": {
@@ -1044,15 +1044,15 @@
         }
       ],
       "name": "libaudit-common",
-      "purl": "pkg:deb/ubuntu/libaudit-common@3.0.7-1build1?distro=ubuntu-22.04&epoch=1",
+      "purl": "pkg:deb/ubuntu/libaudit-common@3.0.7-1ubuntu0.1?distro=ubuntu-22.04&epoch=1",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "1:3.0.7-1build1"
+      "version": "1:3.0.7-1ubuntu0.1"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libaudit1@3.0.7-1build1?distro=ubuntu-22.04&epoch=1",
+      "bom-ref": "pkg:deb/ubuntu/libaudit1@3.0.7-1ubuntu0.1?distro=ubuntu-22.04&epoch=1",
       "licenses": [
         {
           "license": {
@@ -1071,12 +1071,12 @@
         }
       ],
       "name": "libaudit1",
-      "purl": "pkg:deb/ubuntu/libaudit1@3.0.7-1build1?distro=ubuntu-22.04&epoch=1",
+      "purl": "pkg:deb/ubuntu/libaudit1@3.0.7-1ubuntu0.1?distro=ubuntu-22.04&epoch=1",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "1:3.0.7-1build1"
+      "version": "1:3.0.7-1ubuntu0.1"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/libblkid1@2.37.2-4ubuntu3.6?distro=ubuntu-22.04",
@@ -1317,7 +1317,7 @@
       "version": "1.0.8-5ubuntu0.1"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libc-bin@2.35-0ubuntu3.14?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libc-bin@2.35-0ubuntu3.15?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -1336,15 +1336,15 @@
         }
       ],
       "name": "libc-bin",
-      "purl": "pkg:deb/ubuntu/libc-bin@2.35-0ubuntu3.14?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libc-bin@2.35-0ubuntu3.15?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "2.35-0ubuntu3.14"
+      "version": "2.35-0ubuntu3.15"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libc6@2.35-0ubuntu3.14?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libc6@2.35-0ubuntu3.15?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -1363,12 +1363,12 @@
         }
       ],
       "name": "libc6",
-      "purl": "pkg:deb/ubuntu/libc6@2.35-0ubuntu3.14?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libc6@2.35-0ubuntu3.15?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "2.35-0ubuntu3.14"
+      "version": "2.35-0ubuntu3.15"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/libcap-ng0@0.7.9-2.2build3?distro=ubuntu-22.04",
@@ -1524,7 +1524,7 @@
       "version": "5.3.28+dfsg1-0.8ubuntu3"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libdbi-perl@1.643-3ubuntu0.1?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libdbi-perl@1.643-3ubuntu0.3?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -1543,12 +1543,12 @@
         }
       ],
       "name": "libdbi-perl",
-      "purl": "pkg:deb/ubuntu/libdbi-perl@1.643-3ubuntu0.1?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libdbi-perl@1.643-3ubuntu0.3?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "1.643-3ubuntu0.1"
+      "version": "1.643-3ubuntu0.3"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/libdebconfclient0@0.261ubuntu1?distro=ubuntu-22.04",
@@ -1901,7 +1901,7 @@
       "version": "1.43-3"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libgssapi-krb5-2@1.19.2-2ubuntu0.8?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libgssapi-krb5-2@1.19.2-2ubuntu0.10?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -1910,12 +1910,12 @@
         }
       ],
       "name": "libgssapi-krb5-2",
-      "purl": "pkg:deb/ubuntu/libgssapi-krb5-2@1.19.2-2ubuntu0.8?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libgssapi-krb5-2@1.19.2-2ubuntu0.10?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "1.19.2-2ubuntu0.8"
+      "version": "1.19.2-2ubuntu0.10"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/libhogweed6@3.7.3-1build2?distro=ubuntu-22.04",
@@ -2069,7 +2069,7 @@
       "version": "5.2.1-4ubuntu1"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libk5crypto3@1.19.2-2ubuntu0.8?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libk5crypto3@1.19.2-2ubuntu0.10?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -2078,12 +2078,12 @@
         }
       ],
       "name": "libk5crypto3",
-      "purl": "pkg:deb/ubuntu/libk5crypto3@1.19.2-2ubuntu0.8?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libk5crypto3@1.19.2-2ubuntu0.10?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "1.19.2-2ubuntu0.8"
+      "version": "1.19.2-2ubuntu0.10"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/libkeyutils1@1.6.1-2ubuntu3?distro=ubuntu-22.04",
@@ -2118,7 +2118,7 @@
       "version": "1.6.1-2ubuntu3"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libkrb5-3@1.19.2-2ubuntu0.8?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libkrb5-3@1.19.2-2ubuntu0.10?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -2127,15 +2127,15 @@
         }
       ],
       "name": "libkrb5-3",
-      "purl": "pkg:deb/ubuntu/libkrb5-3@1.19.2-2ubuntu0.8?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libkrb5-3@1.19.2-2ubuntu0.10?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "1.19.2-2ubuntu0.8"
+      "version": "1.19.2-2ubuntu0.10"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libkrb5support0@1.19.2-2ubuntu0.8?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libkrb5support0@1.19.2-2ubuntu0.10?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -2144,12 +2144,12 @@
         }
       ],
       "name": "libkrb5support0",
-      "purl": "pkg:deb/ubuntu/libkrb5support0@1.19.2-2ubuntu0.8?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libkrb5support0@1.19.2-2ubuntu0.10?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "1.19.2-2ubuntu0.8"
+      "version": "1.19.2-2ubuntu0.10"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/liblz4-1@1.9.3-2build2?distro=ubuntu-22.04",
@@ -3225,7 +3225,7 @@
       "version": "2.37.2-4ubuntu3.6"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libsqlite3-0@3.37.2-2ubuntu0.7?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libsqlite3-0@3.37.2-2ubuntu0.8?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -3244,12 +3244,12 @@
         }
       ],
       "name": "libsqlite3-0",
-      "purl": "pkg:deb/ubuntu/libsqlite3-0@3.37.2-2ubuntu0.7?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libsqlite3-0@3.37.2-2ubuntu0.8?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "3.37.2-2ubuntu0.7"
+      "version": "3.37.2-2ubuntu0.8"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/libss2@1.46.5-2ubuntu1.2?distro=ubuntu-22.04",
@@ -4221,14 +4221,14 @@
       "version": "6.3-2ubuntu0.3"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/openssl@3.0.2-0ubuntu1.29?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/openssl@3.0.2-0ubuntu1.30?distro=ubuntu-22.04",
       "name": "openssl",
-      "purl": "pkg:deb/ubuntu/openssl@3.0.2-0ubuntu1.29?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/openssl@3.0.2-0ubuntu1.30?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "3.0.2-0ubuntu1.29"
+      "version": "3.0.2-0ubuntu1.30"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/passwd@4.8.1-2ubuntu2.2?distro=ubuntu-22.04&epoch=1",

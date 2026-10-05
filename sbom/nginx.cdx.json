@@ -516,11 +516,11 @@
       "version": "1.0.8-r6"
     },
     {
-      "bom-ref": "pkg:apk/alpine/libcrypto3@3.5.8-r0?distro=3.24.2",
+      "bom-ref": "pkg:apk/alpine/libcrypto3@3.5.9-r0?distro=3.24.2",
       "hashes": [
         {
           "alg": "SHA-1",
-          "content": "1b3b9fc0c136f4936932bcb2ec21499f0ae5dfd3"
+          "content": "1c0dee9734cf22fc97cdd181913bbd710e6dfb08"
         }
       ],
       "licenses": [
@@ -531,12 +531,12 @@
         }
       ],
       "name": "libcrypto3",
-      "purl": "pkg:apk/alpine/libcrypto3@3.5.8-r0?distro=3.24.2",
+      "purl": "pkg:apk/alpine/libcrypto3@3.5.9-r0?distro=3.24.2",
       "supplier": {
         "name": "Natanael Copa <ncopa@alpinelinux.org>"
       },
       "type": "library",
-      "version": "3.5.8-r0"
+      "version": "3.5.9-r0"
     },
     {
       "bom-ref": "pkg:apk/alpine/libcurl@8.22.0-r0?distro=3.24.2",
@@ -860,11 +860,11 @@
       "version": "6.6_p20260516-r0"
     },
     {
-      "bom-ref": "pkg:apk/alpine/libpng@1.6.58-r1?distro=3.24.2",
+      "bom-ref": "pkg:apk/alpine/libpng@1.6.59-r0?distro=3.24.2",
       "hashes": [
         {
           "alg": "SHA-1",
-          "content": "c2cc409de1b5d214d7f208c72be53e7da17d5ea6"
+          "content": "aadb0fae1f673f7f57c582ef75714050eca43b92"
         }
       ],
       "licenses": [
@@ -875,12 +875,12 @@
         }
       ],
       "name": "libpng",
-      "purl": "pkg:apk/alpine/libpng@1.6.58-r1?distro=3.24.2",
+      "purl": "pkg:apk/alpine/libpng@1.6.59-r0?distro=3.24.2",
       "supplier": {
         "name": "Natanael Copa <ncopa@alpinelinux.org>"
       },
       "type": "library",
-      "version": "1.6.58-r1"
+      "version": "1.6.59-r0"
     },
     {
       "bom-ref": "pkg:apk/alpine/libpsl@0.21.5-r3?distro=3.24.2",
@@ -952,11 +952,11 @@
       "version": "1.2.6-r0"
     },
     {
-      "bom-ref": "pkg:apk/alpine/libssl3@3.5.8-r0?distro=3.24.2",
+      "bom-ref": "pkg:apk/alpine/libssl3@3.5.9-r0?distro=3.24.2",
       "hashes": [
         {
           "alg": "SHA-1",
-          "content": "5f9b1e55d821953d2e2b1db322dad70a3b5041ea"
+          "content": "20c4c90ea9d20a9dd3a04deadf2c6c4f64233643"
         }
       ],
       "licenses": [
@@ -967,12 +967,12 @@
         }
       ],
       "name": "libssl3",
-      "purl": "pkg:apk/alpine/libssl3@3.5.8-r0?distro=3.24.2",
+      "purl": "pkg:apk/alpine/libssl3@3.5.9-r0?distro=3.24.2",
       "supplier": {
         "name": "Natanael Copa <ncopa@alpinelinux.org>"
       },
       "type": "library",
-      "version": "3.5.8-r0"
+      "version": "3.5.9-r0"
     },
     {
       "bom-ref": "pkg:apk/alpine/libstdc%2B%2B@15.2.0-r5?distro=3.24.2",
@@ -1386,11 +1386,11 @@
       "version": "6.6_p20260516-r0"
     },
     {
-      "bom-ref": "pkg:apk/alpine/nghttp2-libs@1.69.0-r0?distro=3.24.2",
+      "bom-ref": "pkg:apk/alpine/nghttp2-libs@1.70.0-r0?distro=3.24.2",
       "hashes": [
         {
           "alg": "SHA-1",
-          "content": "5331b8c641f7a9091ce2f43dad2a99851c4f4b12"
+          "content": "63bd319b9af1c3d3c730c96b04a889964696f367"
         }
       ],
       "licenses": [
@@ -1401,12 +1401,12 @@
         }
       ],
       "name": "nghttp2-libs",
-      "purl": "pkg:apk/alpine/nghttp2-libs@1.69.0-r0?distro=3.24.2",
+      "purl": "pkg:apk/alpine/nghttp2-libs@1.70.0-r0?distro=3.24.2",
       "supplier": {
         "name": "Francesco Colista <fcolista@alpinelinux.org>"
       },
       "type": "library",
-      "version": "1.69.0-r0"
+      "version": "1.70.0-r0"
     },
     {
       "bom-ref": "pkg:apk/alpine/nginx-module-acme@1.30.5.0.4.1-r1?distro=3.24.2",
@@ -1607,11 +1607,11 @@
       "version": "1.30.5-r1"
     },
     {
-      "bom-ref": "pkg:apk/alpine/pcre2@10.48-r0?distro=3.24.2",
+      "bom-ref": "pkg:apk/alpine/pcre2@10.49-r0?distro=3.24.2",
       "hashes": [
         {
           "alg": "SHA-1",
-          "content": "47c5cee73bff18ce31bb501043c628f04d2af94a"
+          "content": "ec992b00baf71bba1dd9e2179613f9233af35c8d"
         }
       ],
       "licenses": [
@@ -1622,12 +1622,12 @@
         }
       ],
       "name": "pcre2",
-      "purl": "pkg:apk/alpine/pcre2@10.48-r0?distro=3.24.2",
+      "purl": "pkg:apk/alpine/pcre2@10.49-r0?distro=3.24.2",
       "supplier": {
         "name": "Jakub Jirutka <jakub@jirutka.cz>"
       },
       "type": "library",
-      "version": "10.48-r0"
+      "version": "10.49-r0"
     },
     {
       "bom-ref": "pkg:apk/alpine/scanelf@1.3.9-r1?distro=3.24.2",

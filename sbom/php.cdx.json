@@ -7527,7 +7527,7 @@
       "version": "1.8.1-1"
     },
     {
-      "bom-ref": "pkg:deb/debian/libpng-dev@1.6.39-2%2Bdeb12u5?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/libpng-dev@1.6.39-2%2Bdeb12u6?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -7571,15 +7571,15 @@
         }
       ],
       "name": "libpng-dev",
-      "purl": "pkg:deb/debian/libpng-dev@1.6.39-2%2Bdeb12u5?distro=debian-12.15",
+      "purl": "pkg:deb/debian/libpng-dev@1.6.39-2%2Bdeb12u6?distro=debian-12.15",
       "supplier": {
         "name": "Maintainers of libpng1.6 packages <libpng1.6@packages.debian.org>"
       },
       "type": "library",
-      "version": "1.6.39-2+deb12u5"
+      "version": "1.6.39-2+deb12u6"
     },
     {
-      "bom-ref": "pkg:deb/debian/libpng16-16@1.6.39-2%2Bdeb12u5?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/libpng16-16@1.6.39-2%2Bdeb12u6?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -7623,12 +7623,12 @@
         }
       ],
       "name": "libpng16-16",
-      "purl": "pkg:deb/debian/libpng16-16@1.6.39-2%2Bdeb12u5?distro=debian-12.15",
+      "purl": "pkg:deb/debian/libpng16-16@1.6.39-2%2Bdeb12u6?distro=debian-12.15",
       "supplier": {
         "name": "Maintainers of libpng1.6 packages <libpng1.6@packages.debian.org>"
       },
       "type": "library",
-      "version": "1.6.39-2+deb12u5"
+      "version": "1.6.39-2+deb12u6"
     },
     {
       "bom-ref": "pkg:deb/debian/libpsl5@0.21.2-1?distro=debian-12.15",

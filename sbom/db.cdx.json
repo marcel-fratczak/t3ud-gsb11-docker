@@ -1524,7 +1524,7 @@
       "version": "5.3.28+dfsg1-0.8ubuntu3"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libdbi-perl@1.643-3ubuntu0.3?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libdbi-perl@1.643-3ubuntu0.4?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -1543,12 +1543,12 @@
         }
       ],
       "name": "libdbi-perl",
-      "purl": "pkg:deb/ubuntu/libdbi-perl@1.643-3ubuntu0.3?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libdbi-perl@1.643-3ubuntu0.4?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "1.643-3ubuntu0.3"
+      "version": "1.643-3ubuntu0.4"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/libdebconfclient0@0.261ubuntu1?distro=ubuntu-22.04",
@@ -3262,7 +3262,7 @@
       "version": "1.46.5-2ubuntu1.2"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libssl3@3.0.2-0ubuntu1.29?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libssl3@3.0.2-0ubuntu1.30?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -3286,12 +3286,12 @@
         }
       ],
       "name": "libssl3",
-      "purl": "pkg:deb/ubuntu/libssl3@3.0.2-0ubuntu1.29?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libssl3@3.0.2-0ubuntu1.30?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "3.0.2-0ubuntu1.29"
+      "version": "3.0.2-0ubuntu1.30"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/libstdc%2B%2B6@12.3.0-1ubuntu1~22.04.3?distro=ubuntu-22.04",
@@ -4899,7 +4899,7 @@
       "version": "1.34+dfsg-1ubuntu0.1.22.04.6"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/tzdata@2026c-0ubuntu0.22.04.1?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/tzdata@2026e-0ubuntu0.22.04.1?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -4908,12 +4908,12 @@
         }
       ],
       "name": "tzdata",
-      "purl": "pkg:deb/ubuntu/tzdata@2026c-0ubuntu0.22.04.1?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/tzdata@2026e-0ubuntu0.22.04.1?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "2026c-0ubuntu0.22.04.1"
+      "version": "2026e-0ubuntu0.22.04.1"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/ubuntu-keyring@2021.03.26?distro=ubuntu-22.04",

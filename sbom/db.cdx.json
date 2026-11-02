@@ -185,7 +185,7 @@
       "version": "1:2.37.2-4ubuntu3.6"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/ca-certificates@20260601~22.04.1?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/ca-certificates@20260816ubuntu0.22.04.1?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -204,12 +204,12 @@
         }
       ],
       "name": "ca-certificates",
-      "purl": "pkg:deb/ubuntu/ca-certificates@20260601~22.04.1?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/ca-certificates@20260816ubuntu0.22.04.1?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "20260601~22.04.1"
+      "version": "20260816ubuntu0.22.04.1"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/coreutils@8.32-4.1ubuntu1.4?distro=ubuntu-22.04",
@@ -2179,7 +2179,7 @@
       "version": "1.9.3-2build2"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/liblzma5@5.2.5-2ubuntu1.1?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/liblzma5@5.2.5-2ubuntu1.2?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -2258,12 +2258,12 @@
         }
       ],
       "name": "liblzma5",
-      "purl": "pkg:deb/ubuntu/liblzma5@5.2.5-2ubuntu1.1?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/liblzma5@5.2.5-2ubuntu1.2?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "5.2.5-2ubuntu1.1"
+      "version": "5.2.5-2ubuntu1.2"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/libmariadb3@10.11.19%2Bmaria~ubu2204?distro=ubuntu-22.04&epoch=1",
@@ -3304,7 +3304,7 @@
       "version": "12.3.0-1ubuntu1~22.04.3"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libsystemd0@249.11-0ubuntu3.22?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libsystemd0@249.11-0ubuntu3.23?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -3348,12 +3348,12 @@
         }
       ],
       "name": "libsystemd0",
-      "purl": "pkg:deb/ubuntu/libsystemd0@249.11-0ubuntu3.22?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libsystemd0@249.11-0ubuntu3.23?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "249.11-0ubuntu3.22"
+      "version": "249.11-0ubuntu3.23"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/libtasn1-6@4.18.0-4ubuntu0.2?distro=ubuntu-22.04",
@@ -3546,7 +3546,7 @@
       "version": "1.3.2-2ubuntu0.1"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libudev1@249.11-0ubuntu3.22?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libudev1@249.11-0ubuntu3.23?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -3590,12 +3590,12 @@
         }
       ],
       "name": "libudev1",
-      "purl": "pkg:deb/ubuntu/libudev1@249.11-0ubuntu3.22?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libudev1@249.11-0ubuntu3.23?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "249.11-0ubuntu3.22"
+      "version": "249.11-0ubuntu3.23"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/libunistring2@1.0-1?distro=ubuntu-22.04",
@@ -5037,7 +5037,7 @@
       "version": "2.37.2-4ubuntu3.6"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/xz-utils@5.2.5-2ubuntu1.1?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/xz-utils@5.2.5-2ubuntu1.2?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -5116,12 +5116,12 @@
         }
       ],
       "name": "xz-utils",
-      "purl": "pkg:deb/ubuntu/xz-utils@5.2.5-2ubuntu1.1?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/xz-utils@5.2.5-2ubuntu1.2?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "5.2.5-2ubuntu1.1"
+      "version": "5.2.5-2ubuntu1.2"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/zlib1g@1.2.11.dfsg-2ubuntu9.2?distro=ubuntu-22.04&epoch=1",

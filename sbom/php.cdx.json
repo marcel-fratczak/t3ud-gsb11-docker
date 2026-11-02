@@ -1790,7 +1790,7 @@
       "version": "72.1-3+deb12u1"
     },
     {
-      "bom-ref": "pkg:deb/debian/imagemagick-6-common@6.9.11.60%2Bdfsg-1.6%2Bdeb12u14?distro=debian-12.15&epoch=8",
+      "bom-ref": "pkg:deb/debian/imagemagick-6-common@6.9.11.60%2Bdfsg-1.6%2Bdeb12u15?distro=debian-12.15&epoch=8",
       "licenses": [
         {
           "license": {
@@ -1919,15 +1919,15 @@
         }
       ],
       "name": "imagemagick-6-common",
-      "purl": "pkg:deb/debian/imagemagick-6-common@6.9.11.60%2Bdfsg-1.6%2Bdeb12u14?distro=debian-12.15&epoch=8",
+      "purl": "pkg:deb/debian/imagemagick-6-common@6.9.11.60%2Bdfsg-1.6%2Bdeb12u15?distro=debian-12.15&epoch=8",
       "supplier": {
         "name": "ImageMagick Packaging Team <pkg-gmagick-im-team@lists.alioth.debian.org>"
       },
       "type": "library",
-      "version": "8:6.9.11.60+dfsg-1.6+deb12u14"
+      "version": "8:6.9.11.60+dfsg-1.6+deb12u15"
     },
     {
-      "bom-ref": "pkg:deb/debian/imagemagick-6.q16@6.9.11.60%2Bdfsg-1.6%2Bdeb12u14?distro=debian-12.15&epoch=8",
+      "bom-ref": "pkg:deb/debian/imagemagick-6.q16@6.9.11.60%2Bdfsg-1.6%2Bdeb12u15?distro=debian-12.15&epoch=8",
       "licenses": [
         {
           "license": {
@@ -2056,15 +2056,15 @@
         }
       ],
       "name": "imagemagick-6.q16",
-      "purl": "pkg:deb/debian/imagemagick-6.q16@6.9.11.60%2Bdfsg-1.6%2Bdeb12u14?distro=debian-12.15&epoch=8",
+      "purl": "pkg:deb/debian/imagemagick-6.q16@6.9.11.60%2Bdfsg-1.6%2Bdeb12u15?distro=debian-12.15&epoch=8",
       "supplier": {
         "name": "ImageMagick Packaging Team <pkg-gmagick-im-team@lists.alioth.debian.org>"
       },
       "type": "library",
-      "version": "8:6.9.11.60+dfsg-1.6+deb12u14"
+      "version": "8:6.9.11.60+dfsg-1.6+deb12u15"
     },
     {
-      "bom-ref": "pkg:deb/debian/imagemagick@6.9.11.60%2Bdfsg-1.6%2Bdeb12u14?distro=debian-12.15&epoch=8",
+      "bom-ref": "pkg:deb/debian/imagemagick@6.9.11.60%2Bdfsg-1.6%2Bdeb12u15?distro=debian-12.15&epoch=8",
       "licenses": [
         {
           "license": {
@@ -2193,12 +2193,12 @@
         }
       ],
       "name": "imagemagick",
-      "purl": "pkg:deb/debian/imagemagick@6.9.11.60%2Bdfsg-1.6%2Bdeb12u14?distro=debian-12.15&epoch=8",
+      "purl": "pkg:deb/debian/imagemagick@6.9.11.60%2Bdfsg-1.6%2Bdeb12u15?distro=debian-12.15&epoch=8",
       "supplier": {
         "name": "ImageMagick Packaging Team <pkg-gmagick-im-team@lists.alioth.debian.org>"
       },
       "type": "library",
-      "version": "8:6.9.11.60+dfsg-1.6+deb12u14"
+      "version": "8:6.9.11.60+dfsg-1.6+deb12u15"
     },
     {
       "bom-ref": "pkg:deb/debian/init-system-helpers@1.65.2%2Bdeb12u1?distro=debian-12.15",
@@ -6054,7 +6054,7 @@
       "version": "1:5.44-3"
     },
     {
-      "bom-ref": "pkg:deb/debian/libmagickcore-6.q16-6@6.9.11.60%2Bdfsg-1.6%2Bdeb12u14?distro=debian-12.15&epoch=8",
+      "bom-ref": "pkg:deb/debian/libmagickcore-6.q16-6@6.9.11.60%2Bdfsg-1.6%2Bdeb12u15?distro=debian-12.15&epoch=8",
       "licenses": [
         {
           "license": {
@@ -6183,15 +6183,15 @@
         }
       ],
       "name": "libmagickcore-6.q16-6",
-      "purl": "pkg:deb/debian/libmagickcore-6.q16-6@6.9.11.60%2Bdfsg-1.6%2Bdeb12u14?distro=debian-12.15&epoch=8",
+      "purl": "pkg:deb/debian/libmagickcore-6.q16-6@6.9.11.60%2Bdfsg-1.6%2Bdeb12u15?distro=debian-12.15&epoch=8",
       "supplier": {
         "name": "ImageMagick Packaging Team <pkg-gmagick-im-team@lists.alioth.debian.org>"
       },
       "type": "library",
-      "version": "8:6.9.11.60+dfsg-1.6+deb12u14"
+      "version": "8:6.9.11.60+dfsg-1.6+deb12u15"
     },
     {
-      "bom-ref": "pkg:deb/debian/libmagickwand-6.q16-6@6.9.11.60%2Bdfsg-1.6%2Bdeb12u14?distro=debian-12.15&epoch=8",
+      "bom-ref": "pkg:deb/debian/libmagickwand-6.q16-6@6.9.11.60%2Bdfsg-1.6%2Bdeb12u15?distro=debian-12.15&epoch=8",
       "licenses": [
         {
           "license": {
@@ -6320,12 +6320,12 @@
         }
       ],
       "name": "libmagickwand-6.q16-6",
-      "purl": "pkg:deb/debian/libmagickwand-6.q16-6@6.9.11.60%2Bdfsg-1.6%2Bdeb12u14?distro=debian-12.15&epoch=8",
+      "purl": "pkg:deb/debian/libmagickwand-6.q16-6@6.9.11.60%2Bdfsg-1.6%2Bdeb12u15?distro=debian-12.15&epoch=8",
       "supplier": {
         "name": "ImageMagick Packaging Team <pkg-gmagick-im-team@lists.alioth.debian.org>"
       },
       "type": "library",
-      "version": "8:6.9.11.60+dfsg-1.6+deb12u14"
+      "version": "8:6.9.11.60+dfsg-1.6+deb12u15"
     },
     {
       "bom-ref": "pkg:deb/debian/libmariadb3@10.11.19-0%2Bdeb12u1?distro=debian-12.15&epoch=1",
@@ -7754,7 +7754,7 @@
       "version": "2.4+20151223.gitfa8646d.1-2+b2"
     },
     {
-      "bom-ref": "pkg:deb/debian/libsasl2-2@2.1.28%2Bdfsg-10?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/libsasl2-2@2.1.28%2Bdfsg-10%2Bdeb12u1?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -7858,15 +7858,15 @@
         }
       ],
       "name": "libsasl2-2",
-      "purl": "pkg:deb/debian/libsasl2-2@2.1.28%2Bdfsg-10?distro=debian-12.15",
+      "purl": "pkg:deb/debian/libsasl2-2@2.1.28%2Bdfsg-10%2Bdeb12u1?distro=debian-12.15",
       "supplier": {
         "name": "Debian Cyrus Team <team+cyrus@tracker.debian.org>"
       },
       "type": "library",
-      "version": "2.1.28+dfsg-10"
+      "version": "2.1.28+dfsg-10+deb12u1"
     },
     {
-      "bom-ref": "pkg:deb/debian/libsasl2-modules-db@2.1.28%2Bdfsg-10?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/libsasl2-modules-db@2.1.28%2Bdfsg-10%2Bdeb12u1?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -7970,12 +7970,12 @@
         }
       ],
       "name": "libsasl2-modules-db",
-      "purl": "pkg:deb/debian/libsasl2-modules-db@2.1.28%2Bdfsg-10?distro=debian-12.15",
+      "purl": "pkg:deb/debian/libsasl2-modules-db@2.1.28%2Bdfsg-10%2Bdeb12u1?distro=debian-12.15",
       "supplier": {
         "name": "Debian Cyrus Team <team+cyrus@tracker.debian.org>"
       },
       "type": "library",
-      "version": "2.1.28+dfsg-10"
+      "version": "2.1.28+dfsg-10+deb12u1"
     },
     {
       "bom-ref": "pkg:deb/debian/libseccomp2@2.5.4-1%2Bdeb12u1?distro=debian-12.15",
@@ -10812,7 +10812,7 @@
       "version": "1.34+dfsg-1.2+deb12u1"
     },
     {
-      "bom-ref": "pkg:deb/debian/tzdata@2026e-0%2Bdeb12u1?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/tzdata@2026f-0%2Bdeb12u1?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -10821,12 +10821,12 @@
         }
       ],
       "name": "tzdata",
-      "purl": "pkg:deb/debian/tzdata@2026e-0%2Bdeb12u1?distro=debian-12.15",
+      "purl": "pkg:deb/debian/tzdata@2026f-0%2Bdeb12u1?distro=debian-12.15",
       "supplier": {
         "name": "GNU Libc Maintainers <debian-glibc@lists.debian.org>"
       },
       "type": "library",
-      "version": "2026e-0+deb12u1"
+      "version": "2026f-0+deb12u1"
     },
     {
       "bom-ref": "pkg:deb/debian/ucf@3.0043%2Bnmu1%2Bdeb12u1?distro=debian-12.15",

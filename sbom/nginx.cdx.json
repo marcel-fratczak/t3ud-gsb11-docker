@@ -608,11 +608,11 @@
       "version": "20260508.3.1-r1"
     },
     {
-      "bom-ref": "pkg:apk/alpine/libexpat@2.9.0-r0?distro=3.24.3",
+      "bom-ref": "pkg:apk/alpine/libexpat@2.10.0-r0?distro=3.24.3",
       "hashes": [
         {
           "alg": "SHA-1",
-          "content": "b6e82faa7913a63da771bbddaa6ad38842047f78"
+          "content": "b09de66d12b7d34aa85ffddb49080db2f54b9836"
         }
       ],
       "licenses": [
@@ -623,12 +623,12 @@
         }
       ],
       "name": "libexpat",
-      "purl": "pkg:apk/alpine/libexpat@2.9.0-r0?distro=3.24.3",
+      "purl": "pkg:apk/alpine/libexpat@2.10.0-r0?distro=3.24.3",
       "supplier": {
         "name": "Carlo Landmeter <clandmeter@alpinelinux.org>"
       },
       "type": "library",
-      "version": "2.9.0-r0"
+      "version": "2.10.0-r0"
     },
     {
       "bom-ref": "pkg:apk/alpine/libgcc@15.2.0-r5?distro=3.24.3",

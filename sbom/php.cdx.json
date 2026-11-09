@@ -25,7 +25,7 @@
       "version": "3.134"
     },
     {
-      "bom-ref": "pkg:deb/debian/apt@2.6.1?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/apt@2.6.2?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -49,12 +49,12 @@
         }
       ],
       "name": "apt",
-      "purl": "pkg:deb/debian/apt@2.6.1?distro=debian-12.15",
+      "purl": "pkg:deb/debian/apt@2.6.2?distro=debian-12.15",
       "supplier": {
         "name": "APT Development Team <deity@lists.debian.org>"
       },
       "type": "library",
-      "version": "2.6.1"
+      "version": "2.6.2"
     },
     {
       "bom-ref": "pkg:deb/debian/autoconf@2.71-3?distro=debian-12.15",
@@ -2297,7 +2297,7 @@
       "version": "3.6.0-1+deb12u3"
     },
     {
-      "bom-ref": "pkg:deb/debian/libapt-pkg6.0@2.6.1?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/libapt-pkg6.0@2.6.2?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -2321,12 +2321,12 @@
         }
       ],
       "name": "libapt-pkg6.0",
-      "purl": "pkg:deb/debian/libapt-pkg6.0@2.6.1?distro=debian-12.15",
+      "purl": "pkg:deb/debian/libapt-pkg6.0@2.6.2?distro=debian-12.15",
       "supplier": {
         "name": "APT Development Team <deity@lists.debian.org>"
       },
       "type": "library",
-      "version": "2.6.1"
+      "version": "2.6.2"
     },
     {
       "bom-ref": "pkg:deb/debian/libargon2-1@0~20171227-0.3%2Bdeb12u1?distro=debian-12.15",

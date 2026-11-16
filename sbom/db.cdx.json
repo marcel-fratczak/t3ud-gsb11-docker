@@ -20,7 +20,7 @@
       "version": "3.118ubuntu5"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/apt@2.4.14?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/apt@2.4.15ubuntu0.1?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -34,12 +34,12 @@
         }
       ],
       "name": "apt",
-      "purl": "pkg:deb/ubuntu/apt@2.4.14?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/apt@2.4.15ubuntu0.1?distro=ubuntu-22.04",
       "supplier": {
-        "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        "name": "APT Development Team <deity@lists.debian.org>"
       },
       "type": "library",
-      "version": "2.4.14"
+      "version": "2.4.15ubuntu0.1"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/base-files@12ubuntu4.7?distro=ubuntu-22.04",
@@ -185,7 +185,7 @@
       "version": "1:2.37.2-4ubuntu3.6"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/ca-certificates@20260816ubuntu0.22.04.1?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/ca-certificates@20260816ubuntu0.22.04.2?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -204,12 +204,12 @@
         }
       ],
       "name": "ca-certificates",
-      "purl": "pkg:deb/ubuntu/ca-certificates@20260816ubuntu0.22.04.1?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/ca-certificates@20260816ubuntu0.22.04.2?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "20260816ubuntu0.22.04.1"
+      "version": "20260816ubuntu0.22.04.2"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/coreutils@8.32-4.1ubuntu1.4?distro=ubuntu-22.04",
@@ -904,7 +904,7 @@
       "version": "0.3.112-13build1"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libapt-pkg6.0@2.4.14?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libapt-pkg6.0@2.4.15ubuntu0.1?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -918,12 +918,12 @@
         }
       ],
       "name": "libapt-pkg6.0",
-      "purl": "pkg:deb/ubuntu/libapt-pkg6.0@2.4.14?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libapt-pkg6.0@2.4.15ubuntu0.1?distro=ubuntu-22.04",
       "supplier": {
-        "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        "name": "APT Development Team <deity@lists.debian.org>"
       },
       "type": "library",
-      "version": "2.4.14"
+      "version": "2.4.15ubuntu0.1"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/libassuan0@2.5.5-1build1?distro=ubuntu-22.04",
@@ -2748,14 +2748,14 @@
       "version": "1.4.0-11ubuntu2.8"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libpcre2-8-0@10.39-3ubuntu0.1?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libpcre2-8-0@10.39-3ubuntu0.2?distro=ubuntu-22.04",
       "name": "libpcre2-8-0",
-      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.39-3ubuntu0.1?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.39-3ubuntu0.2?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "10.39-3ubuntu0.1"
+      "version": "10.39-3ubuntu0.2"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/libpcre3@8.39-13ubuntu0.22.04.1?distro=ubuntu-22.04&epoch=2",
@@ -2768,7 +2768,7 @@
       "version": "2:8.39-13ubuntu0.22.04.1"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libperl5.34@5.34.0-3ubuntu1.9?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libperl5.34@5.34.0-3ubuntu1.10?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -2897,12 +2897,12 @@
         }
       ],
       "name": "libperl5.34",
-      "purl": "pkg:deb/ubuntu/libperl5.34@5.34.0-3ubuntu1.9?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libperl5.34@5.34.0-3ubuntu1.10?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "5.34.0-3ubuntu1.9"
+      "version": "5.34.0-3ubuntu1.10"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/libpopt0@1.18-3build1?distro=ubuntu-22.04",
@@ -4248,7 +4248,7 @@
       "version": "1:4.8.1-2ubuntu2.2"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/perl-base@5.34.0-3ubuntu1.9?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/perl-base@5.34.0-3ubuntu1.10?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -4377,15 +4377,15 @@
         }
       ],
       "name": "perl-base",
-      "purl": "pkg:deb/ubuntu/perl-base@5.34.0-3ubuntu1.9?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/perl-base@5.34.0-3ubuntu1.10?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "5.34.0-3ubuntu1.9"
+      "version": "5.34.0-3ubuntu1.10"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/perl-modules-5.34@5.34.0-3ubuntu1.9?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/perl-modules-5.34@5.34.0-3ubuntu1.10?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -4514,15 +4514,15 @@
         }
       ],
       "name": "perl-modules-5.34",
-      "purl": "pkg:deb/ubuntu/perl-modules-5.34@5.34.0-3ubuntu1.9?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/perl-modules-5.34@5.34.0-3ubuntu1.10?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "5.34.0-3ubuntu1.9"
+      "version": "5.34.0-3ubuntu1.10"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/perl@5.34.0-3ubuntu1.9?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/perl@5.34.0-3ubuntu1.10?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -4651,12 +4651,12 @@
         }
       ],
       "name": "perl",
-      "purl": "pkg:deb/ubuntu/perl@5.34.0-3ubuntu1.9?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/perl@5.34.0-3ubuntu1.10?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "5.34.0-3ubuntu1.9"
+      "version": "5.34.0-3ubuntu1.10"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/procps@3.3.17-6ubuntu2.1?distro=ubuntu-22.04&epoch=2",

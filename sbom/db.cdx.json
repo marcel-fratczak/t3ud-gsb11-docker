@@ -1317,7 +1317,7 @@
       "version": "1.0.8-5ubuntu0.1"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libc-bin@2.35-0ubuntu3.15?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libc-bin@2.35-0ubuntu3.18?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -1336,15 +1336,15 @@
         }
       ],
       "name": "libc-bin",
-      "purl": "pkg:deb/ubuntu/libc-bin@2.35-0ubuntu3.15?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libc-bin@2.35-0ubuntu3.18?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "2.35-0ubuntu3.15"
+      "version": "2.35-0ubuntu3.18"
     },
     {
-      "bom-ref": "pkg:deb/ubuntu/libc6@2.35-0ubuntu3.15?distro=ubuntu-22.04",
+      "bom-ref": "pkg:deb/ubuntu/libc6@2.35-0ubuntu3.18?distro=ubuntu-22.04",
       "licenses": [
         {
           "license": {
@@ -1363,12 +1363,12 @@
         }
       ],
       "name": "libc6",
-      "purl": "pkg:deb/ubuntu/libc6@2.35-0ubuntu3.15?distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/libc6@2.35-0ubuntu3.18?distro=ubuntu-22.04",
       "supplier": {
         "name": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
       },
       "type": "library",
-      "version": "2.35-0ubuntu3.15"
+      "version": "2.35-0ubuntu3.18"
     },
     {
       "bom-ref": "pkg:deb/ubuntu/libcap-ng0@0.7.9-2.2build3?distro=ubuntu-22.04",

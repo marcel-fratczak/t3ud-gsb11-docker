@@ -1247,7 +1247,7 @@
       "version": "4:12.2.0-3"
     },
     {
-      "bom-ref": "pkg:deb/debian/ghostscript@10.0.0~dfsg-11%2Bdeb12u8?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/ghostscript@10.0.0~dfsg-11%2Bdeb12u9?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -1396,12 +1396,12 @@
         }
       ],
       "name": "ghostscript",
-      "purl": "pkg:deb/debian/ghostscript@10.0.0~dfsg-11%2Bdeb12u8?distro=debian-12.15",
+      "purl": "pkg:deb/debian/ghostscript@10.0.0~dfsg-11%2Bdeb12u9?distro=debian-12.15",
       "supplier": {
         "name": "Debian QA Group <packages@qa.debian.org>"
       },
       "type": "library",
-      "version": "10.0.0~dfsg-11+deb12u8"
+      "version": "10.0.0~dfsg-11+deb12u9"
     },
     {
       "bom-ref": "pkg:deb/debian/git-man@2.39.5-0%2Bdeb12u3?distro=debian-12.15&epoch=1",
@@ -4472,7 +4472,7 @@
       "version": "2.40-2"
     },
     {
-      "bom-ref": "pkg:deb/debian/libgs-common@10.0.0~dfsg-11%2Bdeb12u8?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/libgs-common@10.0.0~dfsg-11%2Bdeb12u9?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -4621,15 +4621,15 @@
         }
       ],
       "name": "libgs-common",
-      "purl": "pkg:deb/debian/libgs-common@10.0.0~dfsg-11%2Bdeb12u8?distro=debian-12.15",
+      "purl": "pkg:deb/debian/libgs-common@10.0.0~dfsg-11%2Bdeb12u9?distro=debian-12.15",
       "supplier": {
         "name": "Debian QA Group <packages@qa.debian.org>"
       },
       "type": "library",
-      "version": "10.0.0~dfsg-11+deb12u8"
+      "version": "10.0.0~dfsg-11+deb12u9"
     },
     {
-      "bom-ref": "pkg:deb/debian/libgs10-common@10.0.0~dfsg-11%2Bdeb12u8?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/libgs10-common@10.0.0~dfsg-11%2Bdeb12u9?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -4778,15 +4778,15 @@
         }
       ],
       "name": "libgs10-common",
-      "purl": "pkg:deb/debian/libgs10-common@10.0.0~dfsg-11%2Bdeb12u8?distro=debian-12.15",
+      "purl": "pkg:deb/debian/libgs10-common@10.0.0~dfsg-11%2Bdeb12u9?distro=debian-12.15",
       "supplier": {
         "name": "Debian QA Group <packages@qa.debian.org>"
       },
       "type": "library",
-      "version": "10.0.0~dfsg-11+deb12u8"
+      "version": "10.0.0~dfsg-11+deb12u9"
     },
     {
-      "bom-ref": "pkg:deb/debian/libgs10@10.0.0~dfsg-11%2Bdeb12u8?distro=debian-12.15",
+      "bom-ref": "pkg:deb/debian/libgs10@10.0.0~dfsg-11%2Bdeb12u9?distro=debian-12.15",
       "licenses": [
         {
           "license": {
@@ -4935,12 +4935,12 @@
         }
       ],
       "name": "libgs10",
-      "purl": "pkg:deb/debian/libgs10@10.0.0~dfsg-11%2Bdeb12u8?distro=debian-12.15",
+      "purl": "pkg:deb/debian/libgs10@10.0.0~dfsg-11%2Bdeb12u9?distro=debian-12.15",
       "supplier": {
         "name": "Debian QA Group <packages@qa.debian.org>"
       },
       "type": "library",
-      "version": "10.0.0~dfsg-11+deb12u8"
+      "version": "10.0.0~dfsg-11+deb12u9"
     },
     {
       "bom-ref": "pkg:deb/debian/libgssapi-krb5-2@1.20.1-2%2Bdeb12u5?distro=debian-12.15",
